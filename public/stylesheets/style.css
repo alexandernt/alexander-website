@@ -1,4 +1,6 @@
 /*==================== GOOGLE FONTS ====================*/
+/* Poppins */ @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -14,55 +16,60 @@
   --first-color-alt: ;
   --first-color-lighter: ;
   --title-color: ;
-  --text-color: ;
+  --text-color: #FFF;
   --text-color-light: ;
   --input-color: ;
-  --body-color: ;
+  --second-color: #ee1d52;
+  --background-color: #1f2023;
   --container-color: ;
 
   /*========== Font and typography ==========*/
-  --body-font: ;
+  --body-font: 'Poppins', sans-serif;
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
-  --big-font-size: ;
-  --h1-font-size: ;
-  --h2-font-size: ;
-  --h3-font-size: ;
-  --normal-font-size: ;
-  --small-font-size: ;
-  --smaller-font-size: ;
+  --big-font-size: 2rem;
+  --h1-font-size: 1.9rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 1.05rem;
+  --small-font-size: 0.95rem;
+  --smaller-font-size: 0.75rem;
 
   /*========== Font weight ==========*/
-  --font-medium: ;
-  --font-semi-bold: ;
+  --font-medium: 550;
+  --font-semi-bold: 600;
+  --font-bold: 700;
 
   /*========== Margenes Bottom ==========*/
   /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
-  --mb-0-25: ;
-  --mb-0-5: ;
-  --mb-0-75: ;
-  --mb-1: ;
-  --mb-1-5: ;
-  --mb-2: ;
-  --mb-2-5: ;
-  --mb-3: ;
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+  --mb-5: 5rem;
+  --mb-7: 7rem;
+  --mb-10: 10rem;
 
   /*========== z index ==========*/
-  --z-tooltip: ;
-  --z-fixed: ;
-  --z-modal: ;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
 }
 
 /* Font size for large devices */
 @media screen and (min-width: 968px) {
   :root {
-      --big-font-size: ;
-      --h1-font-size: ;
-      --h2-font-size: ;
-      --h3-font-size: ;
-      --normal-font-size: ;
-      --small-font-size: ;
-      --smaller-font-size: ;
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: .9rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
   }
 }
 
@@ -75,7 +82,7 @@
 body {
   font-family: var(--body-font); 
   font-size: var(--normal-font-size); 
-  background-color: var(--body-color); 
+  background-color: var(--background-color); 
   color: var(--text-color);
 }
 
@@ -98,10 +105,12 @@ p {
 
 /*==================== LAYOUT ====================*/
 /* Right bar for scrolling */
-::-webkit-scrollbar {color:red}
+::-webkit-scrollbar {}
 
 /*==================== NAV ====================*/
+.nav{
 
+}
 /* show menu */
 
 /* Active link */
