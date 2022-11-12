@@ -30,7 +30,7 @@
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --big-font-size: 2rem;
-  --h1-font-size: 1.9rem;
+  --h1-font-size: 2.2rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
   --normal-font-size: 1.05rem;
@@ -147,20 +147,34 @@ p {
   letter-spacing: .5px;
 }
 
-.palabra_tachada {
+.crossed__out--word {
   background-image: url("../images/tachado.svg");
   background-position: 50% 100%;
   background-size: contain;
   background-repeat: no-repeat;
 }
 
+.yellow__word{
+ color: #ee1d52;
+}
+
 .word__bold {
   font-weight: bold;
+}
+
+.section__title{
+  font-size: var(--h1-font-size);
+  margin-top: var(--mb-2);
+  margin-bottom: var(--mb-2);
 }
 
 /*==================== LAYOUT ====================*/
 /* Right bar for scrolling */
 ::-webkit-scrollbar {}
+
+
+/*==================== BUTTONS ====================*/
+
 
 /*==================== NAV ====================*/
 .nav {
@@ -197,7 +211,7 @@ p {
 
 .nav__header--text{
   font-size: var(--small-font-size);
-  margin-left: .5rem;
+  margin-left: 1rem;
   word-spacing: -10px;
   letter-spacing: 1px;
   word-wrap: break-word;
@@ -324,7 +338,7 @@ p {
 
 /*==================== HOME ====================*/
 .home {
-  margin-top: 1rem;
+  margin-top: 2rem;
   width: 100%;
 }
 
@@ -345,17 +359,55 @@ p {
   font-size: var(--title-font-size);
   letter-spacing: 2.5px;
   font-weight: 600;
+  line-height: 4.5rem;
 }
 
 .home__left--text{
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   letter-spacing: .5px;
-  line-height: 1.5rem;
+  line-height: 1.8rem;
 }
 
-/*==================== BUTTONS ====================*/
-
 /*==================== ABOUT ====================*/
+.about{
+  margin-left: var(--mb-1);
+  margin-right: var(--mb-1);
+}
+
+.about__content{
+  overflow-x: scroll;
+  gap: 2.5rem;
+  width: 100%;
+  scroll-behavior: initial;
+  height: 30rem;
+}
+
+.about__content--template{
+  height: 30rem;
+  min-width: 17rem;
+  background-color: #27292c;
+  padding: var(--mb-1);
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.about__content--title {
+  margin-top: var(--mb-1);
+  margin-bottom: var(--mb-0-5);
+}
+
+.about__content--intro-text{
+  color: rgb(203, 203, 203);
+}
+
+/*==================== CV ====================*/
+
+.cv{
+  margin-left: var(--mb-1);
+  margin-right: var(--mb-1);
+}
 
 /*==================== SKILLS ====================*/
 
