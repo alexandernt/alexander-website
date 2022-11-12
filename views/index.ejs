@@ -8,17 +8,122 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   </head>
 
   <body class="body">
-    <header class="header" id="header">
-     <nav class="nav" id="nav">
-        <div class="nav__container">
-          <p class="nav__container--p">asd</p>
-        </div>
-     </nav>
-    </header>
-    <p>Welcome to</p>
-  </body>
 
+    <header class="header" id="header">
+
+     <nav class="nav relative" id="nav">
+
+        <div class="nav__header grid fixed">
+
+          <div class="nav__header--left flex">
+
+            <div class="nav__header--logo grid">
+              <img class="nav__header--img" src="http://simpleicon.com/wp-content/uploads/rocket.svg" alt="" srcset="">
+            </div>
+
+            <div class="nav__header--text">
+              <span><a class="palabra_tachada">Alexander <br> Tisko</a></span>
+       
+            </div>
+           
+          </div>
+
+          <div class="nav__icon relative">
+             <div class="box1"></div>
+              <div class="box2"></div>
+              <div class="box3"></div>
+          </div>
+ 
+          </div>
+        </div>
+
+
+        <div class="nav__container absolute">
+          <div class="nav__container--links">
+            <ul class="nav__list grid">
+                <li class="nav__link">
+                    <a class="nav__items" href="#home">Home</a>
+                </li>
+                <li class="nav__link">
+                    <a  class="nav__items"  href="#experience">Experience</a>
+                </li>
+                <li  class="nav__link">
+                    <a class="nav__items"  href="#skills">Skills</a>
+                </li>
+            </ul>
+          </div>  
+        </div>
+
+     </nav>
+     
+    </header>
+
+    <main class="main" id="main">
+      <section class="home" id="home">
+        <div class="home__content grid">
+         
+          <div class="home__left">
+            <div class="home__left--title">
+              <h1 class="home__left--alex">Let's create memorable work together</h1>
+            </div>
+            <div class="home__left--text">
+              <p>It's not necessary to introduce myself if you are here, although something important you need to know is that if you sepnd 45 seconds reading my website, you will know me so much better and hopefully could impress you and <a class="palabra_tachada">work together</a>!
+            </div>
+           
+          </div>
+          <div class="home__right">
+            <img class="home__right--img" src="/images/data-home.svg">
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="about relative" id="about">
+        <div class="about__intro">
+            <h1 class="section__title"> <a class="palabra_tachada">About me</a></h1>
+        </div>
+        <div class="about__container">
+            <div class="about__content grid">
+                <div class="about__items grid">
+                    <i class="uil uil-desktop about__logos"></i>
+                    <p>I have experience as a <span class="text-color bold">Web developer</span>. I've worked with small businesses and clients portfolios</p>
+                </div>
+                <div class="about__items grid">
+                    <i class="uil uil-analysis about__logos"></i>
+                    <p>I am certified by Google Careers with the <span class="text-color bold">Data Analytics Professional</span> Certificate</p>
+                </div>
+                <div class="about__items grid">
+                    <i class="uil uil-panel-add about__logos"></i>
+                    <p>I am working full time remotely as a <span class="text-color bold">Senior Data Analyst</span> for Fluid Truck</p>
+                </div>
+                <div class="about__items grid">
+                    <i class="uil uil-cloud-database-tree about__logos"></i>
+                    <p>I create highly consistent and accurate datasets for analysis in order to help teams make smart,  <span class="text-color bold">data-driven decisions</span></p>
+                </div>
+                <div class="about__items grid">
+                    <i class="uil uil-rocket about__logos"></i>
+                    <p>I work daily with stakeholders, so I understand and adapt myself to <span class="text-color bold">everyones needs</span></p> 
+                </div>
+            </div>
+        </div>
+
+        <div class="about__cv">
+            <h1 class="section__title about__cv-title">
+                Would you like to <span>check my cv</span> ?
+            </h1>
+        </div>
+        <div class="grid about__cv-grid">
+            <img class="about__cv-img flex" src="/img/cv.svg" alt="">
+            <a target="blank" class="about__btn btn" href="https://drive.google.com/file/d/11eo-Scc_4ZEfR9jLQhSHRe5t5Nzr6TF-/view?usp=sharing">Download CV</a>
+        </div>
+        
+    </section>
+    </main>
+  </body>
+  <script src="/javascripts/index.js"></script>
 </html>

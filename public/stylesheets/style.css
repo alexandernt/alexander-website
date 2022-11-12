@@ -1,6 +1,6 @@
 /*==================== GOOGLE FONTS ====================*/
-/* Poppins */ @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
 
 /*==================== VARIABLES CSS ====================*/
 :root {
@@ -8,7 +8,8 @@
 
   /*========== Colors ==========*/
   /* Change favorite color */
-  --hue-color: ; /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
+  --hue-color: ;
+  /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
   /* HSL color mode */
   --first-color: ;
@@ -18,13 +19,14 @@
   --title-color: ;
   --text-color: #FFF;
   --text-color-light: ;
-  --input-color: ;
+  --input-color: #ddf247;
   --second-color: #ee1d52;
   --background-color: #1f2023;
   --container-color: ;
 
   /*========== Font and typography ==========*/
-  --body-font: 'Poppins', sans-serif;
+  --title-font:'Lato', sans-serif;
+  --body-font: 'Montserrat', sans-serif;
 
   /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --big-font-size: 2rem;
@@ -32,8 +34,9 @@
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
   --normal-font-size: 1.05rem;
-  --small-font-size: 0.95rem;
-  --smaller-font-size: 0.75rem;
+  --small-font-size: 1rem;
+  --smaller-font-size: 0.85rem;
+  --title-font-size: 50px;
 
   /*========== Font weight ==========*/
   --font-medium: 550;
@@ -78,29 +81,81 @@
 /*========== Button Dark/Light ==========*/
 
 /*==================== BASE ====================*/
-* {margin: 0; padding: 0; box-sizing: border-box;}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
-  font-family: var(--body-font); 
-  font-size: var(--normal-font-size); 
-  background-color: var(--background-color); 
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--background-color);
   color: var(--text-color);
 }
 
+.main {
+  padding-top: 4rem;
+}
+
 /*==================== REUSABLE CSS CLASSES ====================*/
-.grid {display: grid;}
-.flex {display: flex;}
-.relative {position: relative;}
-.absolute {position: absolute;}
-.fixed {position: fixed;}
-a {text-decoration: none;}
-ul {list-style: none;}
-img {max-width: 100%; height: auto;}
-button {border-style: none;}
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+button {
+  border-style: none;
+}
+
 p {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   letter-spacing: .5px;
-  margin-top: .4rem;
+}
+
+.palabra_tachada {
+  background-image: url("../images/tachado.svg");
+  background-position: 50% 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.word__bold {
+  font-weight: bold;
 }
 
 /*==================== LAYOUT ====================*/
@@ -108,16 +163,195 @@ p {
 ::-webkit-scrollbar {}
 
 /*==================== NAV ====================*/
-.nav{
-
+.nav {
+  width: 100%;
+  /* height: 90vh; */
+  /* margin-top: 30%; */
 }
+
+.nav__header {
+  width: 100%;
+  height: 4rem;
+ grid-template-columns: .7fr .3fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding-left: var(--mb-1);
+  padding-right: var(--mb-1);
+  z-index: var(--z-modal);
+}
+
+.nav__header--left{
+ width: 100%;
+ align-items: center;
+}
+
+.nav__header--logo{
+ justify-content: center;
+ align-items: center;
+}
+
+.nav__header--text{
+  font-size: var(--small-font-size);
+  margin-left: .5rem;
+  word-spacing: -10px;
+  letter-spacing: 1px;
+  word-wrap: break-word;
+  width: 100%;
+}
+
+.nav__header--img {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 50px;
+  justify-self: baseline;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background-color: var(--text-color);
+}
+
+.nav__icon {
+  width: 2rem;
+  height: 1.5rem;
+  -webkit-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  transition: 1s;
+}
+
+.box1,
+.box2,
+.box3 {
+  background-color: var(--text-color);
+  border-radius: 20px;
+  position: absolute;
+  -webkit-transition: ease-out .5s;
+  -o-transition: ease-out .5s;
+  transition: ease-out .5s;
+}
+
+.box1 {
+  top: 0rem;
+  height: 2.5px;
+  width: 100%;
+}
+
+.box2 {
+  top: .75rem;
+  height: 2.5px;
+  width: 100%;
+}
+
+.box3 {
+  top: 1.5rem;
+  height: 2.5px;
+  width: 100%;
+}
+
+.box-active {
+  -webkit-transition: ease-in .5s;
+  -o-transition: ease-in .5s;
+  transition: ease-in .5s;
+  margin-top: .5rem;
+  top: 0;
+}
+
+.box2-rotate {
+  -webkit-transition: ease-in .5s;
+  -o-transition: ease-in .5s;
+  transition: ease-in .5s;
+  margin-top: .5rem;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.box1-rotate {
+  -webkit-transition: ease-in .5s;
+  -o-transition: ease-in .5s;
+  transition: ease-in .5s;
+  margin-top: .5rem;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.box3-dissapear {
+  -webkit-transition: ease-out .1s;
+  -o-transition: ease-out .1s;
+  transition: ease-out .1s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.nav__container {
+  top: -30rem;
+  min-height: 20rem;
+  background-color: var(--background-color);
+  width: 100%;
+  left: -0%;
+  transition: ease-out 1s;
+}
+
 /* show menu */
+.nav__container--active {
+  /* left: 0; */
+  top: 4rem;
+  -webkit-transition: ease-in .6s;
+  -o-transition: ease-in .6s;
+  transition: ease-in .6s;
+}
 
 /* Active link */
 
-/* Change background header */
+/* Overflow Hidden */
+.overflowy__hidden {
+  overflow-y: hidden;
+}
 
 /*==================== HOME ====================*/
+.home {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.home__right {
+  margin: 2rem auto;
+  width: 80%;
+}
+
+.home__left{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  max-width: 100%;
+  overflow-x: visible;
+  overflow-y: hidden;
+}
+.home__left--alex{
+  font-family: var(--title-font);
+  font-size: var(--title-font-size);
+  letter-spacing: 2.5px;
+  font-weight: 600;
+}
+
+.home__left--text{
+  margin-top: 1.5rem;
+  letter-spacing: .5px;
+  line-height: 1.5rem;
+}
 
 /*==================== BUTTONS ====================*/
 
