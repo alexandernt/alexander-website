@@ -1,22 +1,41 @@
 const html = document.documentElement
-const main = document.querySelectorAll('.main')
-var width = screen.width
-var height = screen.height
+const main = document.getElementById("main")
+const body = document.getElementsByClassName('.body')
+let width = screen.width
+let height = screen.height  - 64
+let navHeight = `${height}px`
 
 /*------------------------------- Menu ---------------------------------*/
-
 // Variables
 const navIcon = document.querySelector('.nav__icon')
+const navItems = document.querySelectorAll('.nav__link')
 const box1 = document.querySelector('.box1')
 const box2 = document.querySelector('.box2')
 const box3 = document.querySelector('.box3')
 const navContainer = document.querySelector('.nav__container')
 const skillsContent = document.getElementsByClassName("skills__content");
+const navRelease = document.querySelector('.nav__release--arrow')
+const navReleaseContent = document.querySelector('.nav__release--content')
+const navReleaseHeader = document.querySelector('.nav__release--header')
+const navReleaseArrow = document.querySelector('.nav__release--arrow')
+
+navReleaseHeader.addEventListener('click', () => {
+    console.log(clickCount)
+    if ((clickCount % 2) === 0){
+        navReleaseContent.classList.add('nav__release--content-opened')
+        navReleaseArrow.classList.add('nav__release--arrow-rotate')
+    } else { 
+        navReleaseContent.classList.remove('nav__release--content-opened')
+        navReleaseArrow.classList.remove('nav__release--arrow-rotate')
+    }
+    clickCount ++;
+    console.log(clickCount)
+})
 
 // Show Menu Function
 function showMenu () {
     navContainer.classList.add("nav__container--active")
-    html.classList.add('overflowy__hidden')
+    navContainer.style.height = navHeight
     // navBar.classList.add('hide-hamburger')
     // main.classList.add('back-dark')
     box2.classList.add('box-active')
@@ -29,7 +48,7 @@ function showMenu () {
 // Remove Menu Function
 function removeMenu () {
     navContainer.classList.remove("nav__container--active")
-    html.classList.remove('overflowy__hidden')
+    // html.classList.remove('overflowy__hidden')
     // navBar.classList.remove('hide-hamburger')
     // main.classList.remove('back-dark')
     box2.classList.remove('box-active')
@@ -54,6 +73,23 @@ function doAction () {
 navIcon.addEventListener('click', function() {
     doAction()
 })
+
+navItems.forEach((el) => {
+    el.addEventListener('click', () => {
+        removeMenu();
+        clickCount = 1;
+        console.log('asda')
+    })
+})
+
+// // Close Menu once click on nav links
+// for (let i = 0; i < navItems.length; i++){
+//     navItems[i].addEventListener("click", function(){
+//         removeMenu();
+//         clickCount = 1;
+//         console.log('asda')
+//     });
+// };
 
 /*-------------------------------Skills---------------------------------*/
 

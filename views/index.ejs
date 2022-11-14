@@ -9,12 +9,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alexander Tisko</title>
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 </head>
 
-<body class="body">
+<body class="body"
 
   <header class="header" id="header">
-
     <nav class="nav relative" id="nav">
 
       <div class="nav__header grid fixed">
@@ -46,20 +46,64 @@
         <div class="nav__container--links grid">
           <ul class="nav__list grid">
             <li class="nav__link">
-              <a class="nav__items" href="#home">Home</a>
+              <a class="nav__items" href="#home">
+                Home
+              </a>
             </li>
             <li class="nav__link">
-              <a class="nav__items" href="#experience">Experience</a>
+              <a class="nav__items" href="#about">
+                About Me
+              </a>
             </li>
             <li class="nav__link">
-              <a class="nav__items" href="#skills">Skills</a>
+              <a class="nav__items" href="#skills">
+                Skills
+              </a>
             </li>
+            <li class="nav__link">
+              <a class="nav__items" href="#experience">
+                Experience
+              </a>
+            </li>
+            <li class="nav__link">
+              <a class="nav__items" href="#faqs">
+                FAQs
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav__release">
+          <div class="nav__release--header flex">
+            <h4 class="nav__release--title">
+              Next Releases
+            </h4>
+            <i class="uil uil-angle-down nav__release--arrow"></i>
+          </div>
+         
+          <ul class="nav__release--content">
+            <li class="nav__release--coming">
+              Personal Blog Section 
+            </li>
+            <li class="nav__release--coming">
+              Dynamic CV on the Web 
+            </li>
+            <li class="nav__release--coming">
+              Online Games Section 
+            </li>
+            <li class="nav__release--coming">
+              One "datalexpert" Editorial per Week
+            </li>
+            <li class="nav__release--coming">
+              Websites Improvements
+            </li>
+            <span class="nav__release--update">Last Web Update: 2022-11-13</span>
           </ul>
         </div>
 
         <div class="nav__container--contact grid">
           <div class="nav__contact--links grid">
-            <ul class="nav__contact--hide grid flex ">
+            <ul class="nav__contact--social grid flex ">
               <li class="nav__contact--item">
                 <a target="_blank" href="https://www.linkedin.com/in/alexandertisko/" class="nav__contact--link"><i
                     class="uil uil-linkedin-alt nav__contact--icon"></i></a>
@@ -80,8 +124,9 @@
           </div>
         </div>
 
-        <div class="dark grid aboslute">
+        <div class="dark flex">
           <i class="uil uil-moon dark__moon"></i>
+          <img src="/images/spanish.png" class="dark__language" alt="" srcset="">
         </div>
 
       </div>
@@ -91,14 +136,15 @@
   </header>
 
   <main class="main" id="main">
-    <section class="home" id="home">
+    <span id="#home"></span>
+    <section class="home">
       <div class="home__content grid">
         <div class="home__left">
           <div class="home__left--title">
             <h1 class="home__left--alex">Let's <a class="yellow__word">create</a> memorable work together</h1>
           </div>
           <div class="home__left--text">
-            <p>If you are here, I believe that it's not necessary to introduce myself. Although, something important <a
+            <p class="home__left--p">If you are here, I believe that it's not necessary to introduce myself. Although, something important <a
                 class="word__bold yellow__word">you need to know</a> is that if you spend at least 45 seconds reading my
               website, you will know me so much better and hopefully could impress you and <a
                 class="crossed__out--word ">work together</a>!
@@ -109,8 +155,9 @@
         </div>
       </div>
     </section>
-
-    <section class="about relative" id="about">
+    
+    <span id="about"></span>
+    <section class="about relative" >
       <h1 class="section__title"> <a class="crossed__out--word ">About me</a></h1>
       <div class="about__container">
         <div class="about__content flex">
@@ -119,11 +166,15 @@
               <div class="about__content--title flex">
                 <h1>Data Analyst</h1>
               </div>
-              <p class="about__content--intro-text">I'm working as a Senior Data Analyst for Fluid Truck, and helped lot
-                of clients to understand the powerful of data to make better driven data decisions as a freelancer.</p>
+              <p class="about__content--intro-text">
+                I'm working as a Senior Data Analyst for Fluid Truck, and helped lot
+                of clients to understand the powerful of data to make better driven data decisions as a freelancer.
+              </p>
               <img src="/images/data.svg" alt="" srcset="">
             </div>
           </div>
+
+
           <div class="about__content--template">
             <div class="about__content--intro">
               <div class="about__content--title flex">
@@ -134,6 +185,8 @@
               <img src="/images/developer.svg" alt="" srcset="">
             </div>
           </div>
+
+
           <div class="about__content--template">
             <div class="about__content--intro">
               <div class="about__content--title flex">
@@ -154,8 +207,9 @@
         </div>
       </div>
     </section>
-
-    <section class="skills section relative" id="skills">
+    
+    <span id="skills"></span>
+    <section class="skills section relative">
       <h1 class="section__title skills__section--title"> <a class="crossed__out--word ">Skills</a></h1>
       <div class="skills__grid grid">
         <div class="skills__content skills__open">
@@ -168,7 +222,7 @@
             </div>
             <i class="uil uil-angle-double-down skills__arrow"></i>
           </div>
-          <div class="skills__list grid">
+          <div class="skills__list skills__list--scroll-on grid">
             <div class="skills__data">
               <div class="skills__title">
                 <h3 class="skills__name">Spreadsheets</h3>
@@ -353,9 +407,10 @@
         </div>
       </div>
     </section>
-
+    
+    <span id="experience"></span>
     <section class="qualification section" id="experience">
-      <h1 class="section__title"> <a class="crossed__out--word ">Education</a></h1>
+      <h1 class="section__title"> <a class="crossed__out--word ">Experience</a></h1>
       <div class="qualification__containter data-scroll container">
         <div class="qualification__tabs grid">
           <div class="qualification__button  qualification__active" data-target='#education'>
@@ -401,7 +456,7 @@
                 </div>
 
                 <div class="qualification__calendar">
-                  <i class="uil uil-calendar-alt"></i><a class="text__yellow-background">June 2021</a>
+                  <i class="uil uil-calendar-alt"></i> <a class="text__yellow-background">June 2021</a>
                 </div>
               </div>
             </div>
@@ -415,7 +470,7 @@
                     class="qualification__certificate">Certificate</a>
                 </div>
                 <div class="qualification__calendar">
-                  <i class="uil uil-calendar-alt"></i><a class="text__yellow-background">November 2020</a>
+                  <i class="uil uil-calendar-alt"></i> <a class="text__yellow-background">November 2020</a>
                 </div>
               </div>
               <div>
@@ -438,7 +493,7 @@
                     class="qualification__certificate">Certificate</a>
                 </div>
                 <div class="qualification__calendar">
-                  <i class="uil uil-calendar-alt"></i><a class="text__yellow-background">October 2020</a>
+                  <i class="uil uil-calendar-alt"></i> <a class="text__yellow-background">October 2020</a>
                 </div>
               </div>
             </div>
@@ -454,7 +509,7 @@
                     class="qualification__certificate">Certificate</a>
                 </div>
                 <div class="qualification__calendar">
-                  <i class="uil uil-calendar-alt"></i><a class="text__yellow-background">October 2020</a>
+                  <i class="uil uil-calendar-alt"></i> <a class="text__yellow-background">October 2020</a>
                 </div>
               </div>
               <div>
@@ -478,7 +533,7 @@
                     target="blank" class="qualification__certificate">Certificate</a>
                 </div>
                 <div class="qualification__calendar">
-                  <i class="uil uil-calendar-alt"></i><a class="text__yellow-background">June 2021</a>
+                  <i class="uil uil-calendar-alt"></i> <a class="text__yellow-background">June 2021</a>
                 </div>
               </div>
             </div>
@@ -573,9 +628,9 @@
       </div>
     </section>
 
-
-    <section class="cv" id="cv">
-      <h1 class="section__title"> <a class="crossed__out--word ">Check my CV</a></h1>
+    <span id="cv"></span>
+    <section class="cv" >
+      <h1 class="section__title cv__title"> <a class="crossed__out--word ">Check my CV</a></h1>
       <div class="cv__content grid">
         <div class="cv__content--right">
           <p class="cv__content--text">
@@ -590,49 +645,32 @@
           href="https://drive.google.com/file/d/11eo-Scc_4ZEfR9jLQhSHRe5t5Nzr6TF-/view?usp=sharing">Download CV</a>
       </div>
     </section>
-
+    
+    <span id="contact"></span>
     <section class="contact grid">
       <h1 class="section__title">
         <a class="crossed__out--word ">Let's talk</a>
       </h1>
       <div class="contact__content grid">
         <div class="contact__content--text">
-          <p>
+          <p class="contact__content--p">
             I'm not a fan of the forms. Therefore you can contact me using your favorites social medias
           </p>
         </div>
         <div class="contact__items-btn">
-          <a class="btn">
+          <a class="btn contact__content--btn">
             Contact
           </a>
         </div>
       </div>
+      <span id="faqs"></span>
     </section>
-
-    <section class="faqs relative" id="faqs">
+    
+  
+    <section class="faqs relative">
       <div class="faqs__content">
         <img class="faqs__content--img grid" src="/images/faq.svg" alt="" srcset="">
         <div class="faqs__container">
-          <div class="faqs__template faqs__template--closed">
-            <div class="faqs__template--header flex">
-              <h3 class="faqs__template--question">
-                Why did I decide to create a website?
-              </h3>
-              <i class="uil uil-angle-down faqs__template--arrow"></i>
-            </div>
-            <div class="faqs__template--answer">
-              <p>
-                First of all, my passion for coding and technology. I mean, did u ask yourself how much resources and
-                content we have today to learn about technology?
-              </p>
-              <p>Imagine all you can do if you understand how to code different languages, how a database works and what
-                you
-                can do with that, how a system is designed</p>
-              <p>Finally, I think that the websites gives you the opportunity to let others know what you think, which
-                are
-                your interests, how do you approach different points of views, etc.</p>
-            </div>
-          </div>
 
           <div class="faqs__template faqs__template--closed">
             <div class="faqs__template--header flex">
@@ -655,6 +693,27 @@
             </div>
             <div class="faqs__template--answer">
               <p></p>
+            </div>
+          </div>
+
+          <div class="faqs__template faqs__template--closed">
+            <div class="faqs__template--header flex">
+              <h3 class="faqs__template--question">
+                Why did I decide to create a website?
+              </h3>
+              <i class="uil uil-angle-down faqs__template--arrow"></i>
+            </div>
+            <div class="faqs__template--answer">
+              <p>
+                First of all, my passion for coding and technology. I mean, did u ask yourself how much resources and
+                content we have today to learn about technology?
+              </p>
+              <p>Imagine all you can do if you understand how to code different languages, how a database works and what
+                you
+                can do with that, how a system is designed</p>
+              <p>Finally, I think that the websites gives you the opportunity to let others know what you think, which
+                are
+                your interests, how do you approach different points of views, etc.</p>
             </div>
           </div>
 
@@ -711,15 +770,13 @@
         </div>
       </div>
     </section>
-
-    <section class="footer" id="footer">
-      <div class="footer__copy">
-        <span class="footer__logo">
-          a<a class=" black bold">lll</a>x
-        </span>
+    
+    <span id="footer"></span>
+    <section class="footer">
+      <img src="/images/alexx.svg" class="footer__img flex" alt="" srcset="">
+      <div class="footer__content">
         <p>I'm based in Argentina, Buenos Aires.</p>
         <p>Copyrights are not reserved, we will be living in a decentralized world, let's keep public our ideas.</p>
-        <p>Cryptos / NFTs are the future.</p>
       </div>
     </section>
 
@@ -727,5 +784,15 @@
   </main>
 </body>
 <script src="/javascripts/index.js"></script>
-
+<script>
+  ScrollOut({
+      targets: '.about__content, .skills__header, .skills__list--scroll-on, .qualification__tabs, .qualification__active, .cv__content--text, .cv__content--btn, .faqs__template--header, .contact__content--p, .contact__content--btn',
+      threshold: 0.05,
+      once: true,
+      cssProps: {
+          viewportY: true,
+          visibleY: true
+      },
+  });
+</script>
 </html>
