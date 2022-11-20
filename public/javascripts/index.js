@@ -78,18 +78,9 @@ navItems.forEach((el) => {
     el.addEventListener('click', () => {
         removeMenu();
         clickCount = 1;
-        console.log('asda')
     })
 })
 
-// // Close Menu once click on nav links
-// for (let i = 0; i < navItems.length; i++){
-//     navItems[i].addEventListener("click", function(){
-//         removeMenu();
-//         clickCount = 1;
-//         console.log('asda')
-//     });
-// };
 
 /*-------------------------------Skills---------------------------------*/
 
@@ -155,3 +146,14 @@ faqsHeader.forEach((el) => {
     el.addEventListener('click', toggleFaqs)
 })
 
+
+/*-------------------------------ACTIVE BOTTOM SECTION---------------------------------*/
+
+const bottomContainer = document.querySelector('.bottom__container')
+
+function scrollActive() {
+    const scrollY = window.pageYOffset
+    if(scrollY > 300) bottomContainer.classList.add('bottom__active')
+    else bottomContainer.classList.remove('bottom__active')
+}
+window.addEventListener('scroll', scrollActive);
