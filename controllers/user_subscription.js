@@ -16,7 +16,6 @@ exports.userSubscriptionValidation = [
     check('userSubsEmail')
         .normalizeEmail()
         .escape()
-        .withMessage('Only allow characters')
         .trim()
         .notEmpty()
         .withMessage('Email must not be empty')
