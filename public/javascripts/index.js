@@ -13,12 +13,19 @@ const box1 = document.querySelector('.box1')
 const box2 = document.querySelector('.box2')
 const box3 = document.querySelector('.box3')
 const navContainer = document.querySelector('.nav__container')
-const skillsContent = document.getElementsByClassName("skills__content");
 const navRelease = document.querySelector('.nav__release--arrow')
 const navReleaseContent = document.querySelector('.nav__release--content')
 const navReleaseHeader = document.querySelector('.nav__release--header')
 const navReleaseArrow = document.querySelector('.nav__release--arrow')
 
+// If click on contact --> Open Menu
+const contactBtn = document.querySelector('.contact__content--btn')
+contactBtn.addEventListener('click', () => {
+    showMenu()
+    clickCount = clickCount + 1
+});
+
+// 
 navReleaseHeader.addEventListener('click', () => {
     console.log(clickCount)
     if ((clickCount % 2) === 0){
@@ -30,33 +37,28 @@ navReleaseHeader.addEventListener('click', () => {
     }
     clickCount ++;
     console.log(clickCount)
-})
+});
 
 // Show Menu Function
 function showMenu () {
     navContainer.classList.add("nav__container--active")
     navContainer.style.height = navHeight
-    // navBar.classList.add('hide-hamburger')
-    // main.classList.add('back-dark')
     box2.classList.add('box-active')
     box3.classList.add('box3-dissapear')
     box2.classList.add('box2-rotate')
     box1.classList.add('box1-rotate')
     box1.classList.add('box-active')
-}
+};
 
 // Remove Menu Function
 function removeMenu () {
     navContainer.classList.remove("nav__container--active")
-    // html.classList.remove('overflowy__hidden')
-    // navBar.classList.remove('hide-hamburger')
-    // main.classList.remove('back-dark')
     box2.classList.remove('box-active')
     box3.classList.remove('box3-dissapear')
     box2.classList.remove('box2-rotate')
     box1.classList.remove('box1-rotate')
     box1.classList.remove('box-active')
-}
+};
 
 // This function will count the user clicks on the hamburguer and show or remove menu
 let clickCount = 1;
@@ -67,40 +69,40 @@ function doAction () {
     } else { 
         removeMenu()
     }
-}
+};
 
 // Calling doAction function and showing or removing menu (final function)
 navIcon.addEventListener('click', function() {
     doAction()
-})
+});
 
 navItems.forEach((el) => {
     el.addEventListener('click', () => {
         removeMenu();
         clickCount = 1;
     })
-})
-
+});
 
 /*-------------------------------Skills---------------------------------*/
 
 // Variables
-const skillsHeader = document.querySelectorAll('.skills__header');
+const skillsHeader = document.querySelectorAll('.skills__header')
+const skillsContent = document.getElementsByClassName("skills__content")
 
 // Main Function
 function toggleSkills() {
     let itemClass = this.parentNode.className
-    console.log(this.parentNode.className)
     for (i = 0; i < skillsContent.length; i++) {
         if (itemClass === 'skills__content skills__close') this.parentNode.className = 'skills__content skills__open' 
         if (itemClass === 'skills__content skills__open') this.parentNode.className = 'skills__content skills__close'
     }
-}
+};
 
 // For each header, apply the toggleSkills function
 skillsHeader.forEach((el) => {
     el.addEventListener('click', toggleSkills)
 });
+
 
 /*-------------------------------Qualifications---------------------------------*/
 // Variables
@@ -120,7 +122,7 @@ tabs.forEach(tab => {
         })
         tab.classList.add('qualification__active')
     })
-})
+});
 
 /*-------------------------------FAQs---------------------------------*/
 
@@ -139,12 +141,12 @@ function toggleFaqs() {
             this.parentNode.className = 'faqs__template faqs__template--closed'
         }
     }
-}
+};
 
 // For each header called the toggleFaqs fucntion
 faqsHeader.forEach((el) => {
     el.addEventListener('click', toggleFaqs)
-})
+});
 
 
 /*-------------------------------ACTIVE BOTTOM SECTION---------------------------------*/
@@ -155,5 +157,6 @@ function scrollActive() {
     const scrollY = window.pageYOffset
     if(scrollY > 300) bottomContainer.classList.add('bottom__active')
     else bottomContainer.classList.remove('bottom__active')
-}
+};
+
 window.addEventListener('scroll', scrollActive);
