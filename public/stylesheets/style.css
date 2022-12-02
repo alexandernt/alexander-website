@@ -511,6 +511,7 @@ h3{
 
 .nav__release--coming {
   margin-top: var(--mb-0-25);
+  margin-bottom: var(--mb-0-5);
   color: var(--text-color-light);
   font-size: var(--small-font-size);
   list-style: square;
