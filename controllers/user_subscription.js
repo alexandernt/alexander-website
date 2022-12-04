@@ -6,8 +6,8 @@ const e = require('express');
 
 exports.userSubscriptionValidation = [
     check('userSubsName')
-        .isLength({min:2})
-        .withMessage('Name must be at least 2 characters long')
+        .isLength({min:3})
+        .withMessage('Name must be at least 3 characters long')
         .escape()
         .trim()
         .notEmpty()
@@ -42,16 +42,9 @@ exports.userSubscription = function(req, res){
                 connection.release();
                 if(error) throw error;
                 var count = results[0].total_users;
-                res.render('index', {alert, values, data: count});
+                res.render('error-sub', {alert, values, data: count});
             })
         })
-        // database.connection.connect();
-        // database.connection.query(userCount, function(error, results, fields){
-        //     if(error) throw error;
-        //     var count = results[0].total_users;
-        //     res.render('index', {alert, values, data: count});
-        // })
-        // database.connection.end();
         
     } else {
         let userSubscritpion = {
@@ -64,23 +57,14 @@ exports.userSubscription = function(req, res){
             connection.query(queryToRun, userSubscritpion, function (error, results){
                 if(error) throw error;
                 console.log(results);
-                res.send('Email registered. Thanks ' + req.body.userSubsName);
+                // res.send('Email registered. Thanks ' + req.body.userSubsName);
             });
+            res.render('welcome', {userName: userSubscritpion.user_subscription_name});
+            // let homeCall = function () { 
+            //     res.render('index')
+            // }
+            // setInterval(homeCall, 5000);
         });
-        // database.connection.connect();
-        // database.connection.query(queryToRun, userSubscritpion, function(error, results){
-        //     if(error) throw error
-        //     else {
-        //         console.log(results)
-        //         // let userCount = "SELECT COUNT(DISTINCT user_subscription_id) AS total_users FROM user_subscription";
-        //         // database.connection.query(userCount, function(error, results, fields){
-        //         //     if(error) throw error
-        //         //     else console.log(results, fields)
-        //         // })
-        //         res.send('Email registered. Thanks ' + req.body.userSubsName)
-        //     };
-        // });
-        // database.connection.end();
     } 
 }
   

@@ -12,11 +12,4 @@ exports.index = function (req, res, next) {
         res.render('index', {data: count});
       })
     })
-    // database.connection.connect();
-    // database.connection.query(userCount, function(error, results, fields){
-    //   if(error) throw error
-    //   var count = results[0].total_users
-    //   res.render('index', {data: count})
-    // });
-    // database.connection.end();
 };
