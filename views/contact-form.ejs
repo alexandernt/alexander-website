@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <%- include('includes/head') %>
+    </head>
+
+    <body class="body">
+        <header class="header" id="header">
+    
+        </header>
+
+       <main class="contact__form" id="contact__form">
+           <div class="contact__form--content">
+            <div class="cform__header">
+                <a href="/" class="error__ref">
+                    <i class="uil uil-arrow-circle-left error__back"></i>
+                </a>
+            </div>
+            <div class="cform__container">
+                <form action="/contact" class="cform" method="post" autocomplete="on">
+                    <div class="fc__flname grid">
+                        <div class="cform__element">
+                            <!-- <label for="fcname">First name *</label> -->
+                            <input class="fc__input" type="text" id="fcname" name="fcname" placeholder="First name *" required>
+                        </div>
+    
+                        <div class="cform__element">
+                            <!-- <label for="fclastName">Last name *</label> -->
+                            <input class="fc__input" type="text" id="fclastName" name="fclastName" placeholder="Last name *" required>
+                        </div>
+                        
+                    </div>
+
+                    <div class="fccomp__phone grid">
+
+                        <div class="cform__element">
+                            <!-- <label for="fccompanyName">Company name</label> -->
+                            <input class="fc__input" type="text" id="fccompanyName" name="fccompanyName" placeholder="Company name">
+                        </div>
+                        
+                        <div class="cform__element">
+                            <!-- <label for="fcnumber">Phone number</label> -->
+                            <input class="fc__input" type="tel" id="fcnumber" name="fcnumber" placeholder="Phone number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                        </div>
+
+                    </div>
+
+                    <div class="cform__element">
+                        <!-- <label for="fcemail">Email address *</label> -->
+                        <input class="fc__input fc__input--email" type="email" id="fcemail" name="fcemail" placeholder="Email address *" required>
+                    </div>
+                   
+                    <div class="cform__element">
+                        <!-- <label for="fcmessage">Message *</label> -->
+                        <textarea class="fc__input fc__input--message" id="fcmessage" name="fcmessage" placeholder="Message *" required></textarea>
+                    </div>
+
+                    <div class="cform__element">
+                        <button type="submit" class="btn form__btn">Send</button>
+                    </div>
+                    
+            </div>
+           </div>
+       </main>
+
+    </body>
+
+    <script>
+
+    </script>
+
+</html>

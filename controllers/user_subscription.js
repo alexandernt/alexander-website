@@ -57,13 +57,8 @@ exports.userSubscription = function(req, res){
             connection.query(queryToRun, userSubscritpion, function (error, results){
                 if(error) throw error;
                 console.log(results);
-                // res.send('Email registered. Thanks ' + req.body.userSubsName);
             });
             res.render('welcome', {userName: userSubscritpion.user_subscription_name});
-            // let homeCall = function () { 
-            //     res.render('index')
-            // }
-            // setInterval(homeCall, 5000);
         });
     } 
 }
