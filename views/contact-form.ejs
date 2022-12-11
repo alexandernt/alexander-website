@@ -17,8 +17,13 @@
                     <i class="uil uil-arrow-circle-left error__back"></i>
                 </a>
             </div>
+            <div class="cform__title">
+                <h1 class="section__title">
+                    Contact me
+                </h1>
+            </div>
             <div class="cform__container">
-                <form action="/contact" class="cform" method="post" autocomplete="on">
+                <form action="/contact-val" class="cform" method="post" autocomplete="on">
                     <div class="fc__flname grid">
                         <div class="cform__element">
                             <!-- <label for="fcname">First name *</label> -->
@@ -41,7 +46,7 @@
                         
                         <div class="cform__element">
                             <!-- <label for="fcnumber">Phone number</label> -->
-                            <input class="fc__input" type="tel" id="fcnumber" name="fcnumber" placeholder="Phone number" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                            <input class="fc__input" type="tel" id="fcnumber" name="fcnumber" placeholder="Phone number">
                         </div>
 
                     </div>
@@ -56,12 +61,15 @@
                         <textarea class="fc__input fc__input--message" id="fcmessage" name="fcmessage" placeholder="Message *" required></textarea>
                     </div>
 
-                    <div class="cform__element">
-                        <button type="submit" class="btn form__btn">Send</button>
+                    <span class="section__title--details">It's obligatory to fill sections with the character * next to the name.</span>
+
+                    <div class="cform__element cform__element--submit">
+                        <button type="submit"  class="btn form__btn">Send</button>
                     </div>
                     
-            </div>
+                </form>
            </div>
+
        </main>
 
     </body>

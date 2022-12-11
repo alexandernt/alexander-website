@@ -1,12 +1,13 @@
-var express = require('express');
-var router = express.Router();
+let express = require('express');
+let router = express.Router();
 
 // Calling controllers
-var indexController = require('../controllers/index');
-var userSubscription = require('../controllers/user_subscription');
-var errorSub = require('../controllers/error-sub');
-var welcome = require('../controllers/welcome');
-var contactForm = require('../controllers/contact-form');
+let indexController = require('../controllers/index');
+let userSubscription = require('../controllers/user_subscription');
+let errorSub = require('../controllers/error-sub');
+let welcome = require('../controllers/welcome');
+let contactForm = require('../controllers/contact-form');
+let contact = require('../controllers/contact');
 
 // Defining routings
 router.get('/', indexController.index);
@@ -19,5 +20,7 @@ router.post('/error-subscription', errorSub.errorSub);
 router.post('/welcome', welcome.welcome);
 router.get('/contact', contactForm.contactForm);
 router.post('/contact', contactForm.contactForm);
+router.get('/contact-val', contact.contactFormValidator, contact.contactForm)
+router.post('/contact-val', contact.contactFormValidator, contact.contactForm)
 
 module.exports = router;

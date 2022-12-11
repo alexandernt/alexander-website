@@ -239,7 +239,7 @@ button {
   text-align: center;
   color: var(--background-color);
   font-weight: var(--font-bold);
-  letter-spacing: .5px;
+  letter-spacing: .2px;
   -webkit-box-shadow: 6px 6px 0 0 rgba(234, 234, 234, 0.185);
           box-shadow: 6px 6px 0 0 rgba(234, 234, 234, 0.185);
   margin: var(--mb-2) auto;
@@ -639,19 +639,11 @@ button {
 }
 
 .about__content {
-  transition: .3s;
   overflow-x: auto;
   gap: 2.5rem;
   width: 100%;
   height: 100%;
   padding-bottom: var(--mb-1);
-  /*justify-content: center;
-  align-items: center;
-  */:;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  -ms-transition: .3s;
-  -o-transition: .3s;
 }
 
 
@@ -739,11 +731,6 @@ button {
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
-  transition: .3s;
-  -webkit-transition: .3s;
-  -moz-transition: .3s;
-  -ms-transition: .3s;
-  -o-transition: .3s;
 }
 
 .skills__icon {
@@ -780,11 +767,6 @@ button {
 
 .skills__data {
   padding-top: .5rem;
-  transition: .2s ease-out;
-  -webkit-transition: .2s ease-out;
-  -moz-transition: .2s ease-out;
-  -ms-transition: .2s ease-out;
-  -o-transition: .2s ease-out;
 }
 
 .skills__title {
@@ -1082,11 +1064,15 @@ button {
 
 .cv__content--img {
   width: 100%;
-  margin: 0 auto var(--mb-1) auto;
+  margin: 0 auto;
 }
 
 .cv__content--left {
   margin-top: var(--mb-3);
+}
+
+.cv__content--btn {
+  margin: var(--mb-1) auto var(--mb-2) auto;
 }
 
 /*==================== CONTACT ====================*/
@@ -1096,24 +1082,32 @@ button {
 }
 
 .contact__content {
-  width: 100%;
-  padding: 0 0 var(--mb-2) 0;
-  -ms-grid-columns: .6fr .4fr;
   grid-template-columns: .6fr .4fr;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  gap: var(--mb-0-5);
+  margin-top: var(--mb-2);
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
 }
 
-.contact__content--text {
-  color: var(--text-color-light);
+.contact__img {
+  max-width: 100%;
 }
 
-.contact__items-btn {
-  margin: auto;
+.contact__img--img {
+  width: 100%;
+}
+
+.contact__text {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.contact__content--btn {
+  font-weight: var(--font-semi-bold);
+  color: var(--background-color);
+  width: 100%;
 }
 
 /* Active Modal */
@@ -1150,11 +1144,6 @@ button {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  transition: .3s;
-    -webkit-transition: .3s;
-    -moz-transition: .3s;
-    -ms-transition: .3s;
-    -o-transition: .3s;
 }
 
 .faqs__template--question {
@@ -1336,6 +1325,9 @@ form{
   margin-left: 0;
   width: 7rem;
   padding: .5rem 1rem;
+  font-weight: 500;
+  font-size: var(--normal-font-size);
+
 }
 
 .footer__community {
@@ -1666,10 +1658,10 @@ form{
             align-items: center;
   }
 
-  .contact {
+  /* .contact {
     display: none;
     visibility: hidden;
-  }
+  } */
 
   .cv__content--btn {
     margin-left: auto;
@@ -2146,16 +2138,16 @@ form{
   margin: var(--mb-2) var(--mb-1);
 }
 
+.cform__header {
+  margin-bottom: var(--mb-2);
+}
+
 .cform__container {
   width: 100%;
 }
 
 .cform {
   max-width: 100%;
-}
-
-.fc__input {
-  padding: var(--mb-1);
 }
 
 .fc__flname,
@@ -2168,8 +2160,22 @@ form{
 }
 
 .fc__input {
+  padding: var(--mb-1);
   width: 100%;
   margin-bottom: var(--mb-1);
+  font-family: var(--body-font);
+  background-color: var(--background-color-lighter);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border: none;
+  color: var(--text-color);
+}
+
+.fc__input::placeholder {
+  color: var(--text-color-light);
 }
 
 .fcname {
@@ -2181,4 +2187,14 @@ form{
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: scroll;
+}
+
+.section__title--details {
+  margin-top: var(--mb-2);
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+.cform__element--submit {
+  margin-top: var(--mb-1);
 }
