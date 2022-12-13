@@ -19,8 +19,16 @@
             </div>
             <div class="cform__title">
                 <h1 class="section__title">
-                    Contact me
+                    <a class="crossed__out--word">Contact me</a>
                 </h1>
+            </div>
+            <div class="cform__considerations">
+        
+                <ul class="cform__considerations--content">
+                    <li class="cform__considerations--points">Sections with <a class="first__color--word word__bold">*</a> are mandatories.</li>
+                    <li class="cform__considerations--points">At least 2 characters long</li>
+                    <li class="cform__considerations--points">Phone number example: country code + area code + phone number = 5491123238352</li>
+                </ul>
             </div>
             <div class="cform__container">
                 <form action="/contact-val" class="cform" method="post" autocomplete="on">
@@ -50,18 +58,34 @@
                         </div>
 
                     </div>
-
+                   
                     <div class="cform__element">
-                        <!-- <label for="fcemail">Email address *</label> -->
                         <input class="fc__input fc__input--email" type="email" id="fcemail" name="fcemail" placeholder="Email address *" required>
                     </div>
+                        
+                    <div class="fc__lang grid"> 
+
+                        <div class="cform__element">
+                            <%- include('includes/form-countries') %>
+                        </div>
+
+                        <div class="cform__element">
+                        
+                            <select id="fclanguage" name="fclanguage" class="fc__input" required>
+                                <option value="0" disabled selected hidden>Language *</option>
+                                <option value="English">English</option>
+                                <option value="Spanish">Spanish</option>
+                            </select>
+    
+                        </div>
+                    </div>
+                   
+                    
                    
                     <div class="cform__element">
                         <!-- <label for="fcmessage">Message *</label> -->
                         <textarea class="fc__input fc__input--message" id="fcmessage" name="fcmessage" placeholder="Message *" required></textarea>
                     </div>
-
-                    <span class="section__title--details">It's obligatory to fill sections with the character * next to the name.</span>
 
                     <div class="cform__element cform__element--submit">
                         <button type="submit"  class="btn form__btn">Send</button>

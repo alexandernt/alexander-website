@@ -1110,6 +1110,11 @@ button {
   width: 100%;
 }
 
+.contact__content--p {
+  text-align: center;
+  font-weight: bold;
+}
+
 /* Active Modal */
 
 /*==================== PORTFOLIO ====================*/
@@ -1676,6 +1681,15 @@ form{
     display: grid;
   }
 
+  .contact__content--btn {
+    width: 12rem;
+
+  }
+
+  .contact__content {
+    gap: var(--mb-4);
+  }
+
   .footer__form {
     margin-left: auto;
     margin-right: auto;
@@ -1882,7 +1896,8 @@ form{
   .skills,
   .contact,
   .faqs,
-  .footer {
+  .footer,
+  .welcome {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
@@ -1893,6 +1908,14 @@ form{
     margin-left: auto;
     margin-right: auto;
   }
+
+  .contact__form--content,
+  .welcome__content{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .nav__list{
     padding-right: 10rem;
     gap: var(--mb-3);
@@ -1976,6 +1999,27 @@ form{
   .cv {
     display: none;
     visibility: hidden;
+  }
+
+  .contact__content {
+    gap: var(--mb-5);
+    width: 1200px;
+    display: grid;
+    grid-template-columns: .5fr .5fr;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .contact__content--p{
+    font-size: var(--h2-font-size);
+    letter-spacing: 1px;
+  }
+
+
+  .contact__img--img {
+    width: 35rem;
   }
 
   .faqs__content--img {
@@ -2150,13 +2194,41 @@ form{
   max-width: 100%;
 }
 
+.cform__title {
+  margin-bottom: -1rem;
+}
+
+.cform__considerations--title {
+  font-weight: var(--font-bold);
+}
+
+.cform__considerations--content {
+  margin-top: var(--mb-0-5);
+  margin-bottom: var(--mb-2);
+
+}
+
+.cform__considerations--points {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color);
+  list-style: square;
+  margin-left:var(--mb-2);
+  margin-bottom: 0.15rem;
+}
+
 .fc__flname,
-.fccomp__phone  {
+.fccomp__phone,
+.fc__lang {
   gap: var(--mb-0-5);
   grid-template-columns: .5fr .5fr;
   max-width: 100%;
   justify-content: center;
   align-items: center;
+}
+
+.fccountry,
+.fclanguage {
+  cursor: pointer;
 }
 
 .fc__input {
@@ -2171,7 +2243,7 @@ form{
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
   border: none;
-  color: var(--text-color);
+  color: var(--text-color-light);
 }
 
 .fc__input::placeholder {
@@ -2187,6 +2259,10 @@ form{
   box-sizing: border-box;
   overflow-x: hidden;
   overflow-y: scroll;
+}
+
+.fc__input option {
+  color: var(--text-color-light);
 }
 
 .section__title--details {

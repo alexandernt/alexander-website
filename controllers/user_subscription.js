@@ -1,9 +1,11 @@
+// ------------ VARIABLES ------------ \\
 let database = require('../database/db');
 let userCount = require('./index')
 const bodyParser = require('body-parser');
 const {check, validationResult} = require('express-validator');
 const e = require('express');
 
+// ------------ ERROR HANDLER ------------ \\
 exports.userSubscriptionValidation = [
     check('userSubsName')
         .isLength({min:3})
@@ -25,6 +27,7 @@ exports.userSubscriptionValidation = [
     ,
 ]
 
+// ------------ REDIRECT HANDLER ------------ \\
 exports.userSubscription = function(req, res){
 
     const errors = validationResult(req)
@@ -32,19 +35,20 @@ exports.userSubscription = function(req, res){
     if(!errors.isEmpty()) {
         const values = req.body;
         const alert = errors.array();
-        console.log(values);
-        console.log(errors);
+        // console.log(values);
+        // console.log(errors);
+        res.render('error-sub', {alert, values});  
         // return res.status(400).json({errors: errors.array()});
-        var userCount = "SELECT COUNT(DISTINCT user_subscription_id) AS total_users FROM user_subscription";
-        database.pool.getConnection(function(err,connection){
-            if (err) throw err;
-            connection.query(userCount, function(error, results, fields){
-                connection.release();
-                if(error) throw error;
-                var count = results[0].total_users;
-                res.render('error-sub', {alert, values, data: count});
-            })
-        })
+        // var userCount = "SELECT COUNT(DISTINCT user_subscription_id) AS total_users FROM user_subscription";
+        // database.pool.getConnection(function(err,connection){
+        //     if (err) throw err;
+        //     connection.query(userCount, function(error, results, fields){
+        //         connection.release();
+        //         if(error) throw error;
+        //         var count = results[0].total_users;
+        //         res.render('error-sub', {alert, values, data: count});
+        //     })
+        // })
         
     } else {
         let userSubscritpion = {
@@ -55,6 +59,7 @@ exports.userSubscription = function(req, res){
         database.pool.getConnection(function(err,connection){
             if(err) throw err;
             connection.query(queryToRun, userSubscritpion, function (error, results){
+                connection.release();
                 if(error) throw error;
                 console.log(results);
             });

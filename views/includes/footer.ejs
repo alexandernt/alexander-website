@@ -8,8 +8,8 @@
             </div>
             <div class="form">
                 <form class="grid" method="POST" action='/register' autocomplete="on">
-                    <input type="text" class="form__input" name="userSubsName" placeholder="Insert your name">
-                    <input type="email" class="form__input" name="userSubsEmail" placeholder="Insert your email address">
+                    <input type="text" class="form__input" name="userSubsName" placeholder="Insert your name" required>
+                    <input type="email" class="form__input" name="userSubsEmail" placeholder="Insert your email address" required>
                     <button type="submit" class="btn form__btn">Subscribe</button>
                 </form>
                 <% if(typeof alert != 'undefined') { %>
