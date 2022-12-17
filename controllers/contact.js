@@ -39,6 +39,18 @@ exports.contactFormValidator = [
         .isEmail()
         .withMessage('Email address must be real')
     ,
+    check('fccountry')
+        .isLength({min:2})
+        .withMessage('Country must be at least 2 characters long')
+        .notEmpty()
+        .withMessage('Country must not be empty')
+    ,
+    check('fclanguage')
+        .isLength({min:2})
+        .withMessage('Language must be at least 2 characters long')
+        .notEmpty()
+        .withMessage('Language must not be empty')
+    ,
     check('fcmessage')
         .isLength({min:4})
         .withMessage('Message must be at least 4 characters long')
