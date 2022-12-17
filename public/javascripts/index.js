@@ -18,13 +18,6 @@ const navReleaseContent = document.querySelector('.nav__release--content')
 const navReleaseHeader = document.querySelector('.nav__release--header')
 const navReleaseArrow = document.querySelector('.nav__release--arrow')
 
-// If click on contact --> Open Menu
-const contactBtn = document.querySelector('.contact__content--btn')
-contactBtn.addEventListener('click', () => {
-    showMenu()
-    clickCount = clickCount + 1
-});
-
 // 
 navReleaseHeader.addEventListener('click', () => {
     console.log(clickCount)

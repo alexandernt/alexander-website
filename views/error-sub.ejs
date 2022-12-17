@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <%- include('includes/head') %>
+    </head>
+
+    <body class="body">
+        <header class="header" id="header">
+    
+        </header>
+
+        <main class="main__error" id="main__error">
+            <section class="error">
+                <div class="error__content">
+                    <a href="/" class="error__ref">
+                        <i class="uil uil-arrow-circle-left error__back"></i>
+                    </a>
+                    <div class="error__content--img">
+                        <img class="error__img" src="/images/error.svg" alt="" srcset="">
+                    </div>
+                    <div class="error__content--text">
+                        <div class="error__text--content">
+                            <h1 class="error__text--title ">You have the following errors, please fill the form again.</h1>
+                            <% if(typeof alert != 'undefined') { %>
+                                <% alert.forEach( (error) => { %>
+                                    <p class="text__error-msg"> <i class="uil uil-times error__x"></i><%= error.msg %></p>
+                                <% }) %>
+                            <% } %>
+                        </div>
+                        <div class="error__text-btn">
+                            <a class="btn" href="/#footer">Try again!</a>
+                        </div>  
+                        
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+
+    </body>
+
+</html>

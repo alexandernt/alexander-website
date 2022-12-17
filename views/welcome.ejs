@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <%- include('includes/head') %>
+    </head>
+
+    <body class="body">
+        <header class="header" id="header">
+    
+        </header>
+
+       <main class="welcome" id="welcome">
+            <div class="welcome__content">
+                <a href="/" class="error__ref">
+                    <i class="uil uil-arrow-circle-left error__back"></i>
+                </a>
+                <div class="welcome__content--text">
+                    <h1 class="welcome__title">
+                        Welcome, <span class="welcome__name"><%-userName%></span> 👑
+                    </h1>
+                    <h4 class="welcome__intro">Thanks for joining my community, it's really nice to have you here!</h4>
+                    <p>You will be redirected to the home page in <span class="seconds-counter" id="seconds-counter"></span>...</p>
+                </div>
+                <div class="welcome__content--img">
+                    <img class="welcome__img" src="/images/welcome.svg" alt="" srcset="">
+                </div>
+
+            </div>
+       </main>
+
+    </body>
+
+    <script>
+        var timer;
+        var el = document.getElementById('seconds-counter');
+        function incrementSeconds() {
+            var sec = 8;
+            timer = setInterval(() => {
+                el.innerHTML = sec;
+                sec --;
+            }, 1000)
+        };
+        incrementSeconds();
+        setInterval(incrementSeconds, 8000)
+        setTimeout(function(){
+            window.location = "/"
+        }, 8000);
+    </script>
+
+</html>

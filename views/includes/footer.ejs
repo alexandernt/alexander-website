@@ -7,10 +7,10 @@
                 <p><a class="first__color--word word__bold footer__user--text">datalexperts</a> joined the community!</p>
             </div>
             <div class="form">
-                <form class="grid" method="POST" action='/register'>
-                    <input type="text" class="form__input" name="userSubsName" placeholder="Insert your name">
-                    <input type="email" class="form__input" name="userSubsEmail" placeholder="Insert your email address">
-                    <button type="submit" class="btn form__btn">Join</button>
+                <form class="grid" method="POST" action='/register' autocomplete="on">
+                    <input type="text" class="form__input" name="userSubsName" placeholder="Insert your name" required>
+                    <input type="email" class="form__input" name="userSubsEmail" placeholder="Insert your email address" required>
+                    <button type="submit" class="btn form__btn">Subscribe</button>
                 </form>
                 <% if(typeof alert != 'undefined') { %>
                     <% alert.forEach( (error) => { %>
@@ -34,33 +34,28 @@
             
                         <ul class="footer__release--content">
                           <li class="footer__release--coming">
-                            Personal Blog Section
+                            A blog page
                           </li>
                           <li class="footer__release--coming">
-                            Dynamic CV on the Web
+                            A dynamic CV page
                           </li>
                           <li class="footer__release--coming">
-                            Online Games Section
+                            A games page 
                           </li>
                           <li class="footer__release--coming">
-                            One "datalexpert" Editorial per Week
+                            Websites improvements
                           </li>
                           <li class="footer__release--coming">
-                            Websites Improvements
+                            Spanish website
                           </li>
                           <li class="footer__release--coming">
-                            Spanish Website
+                            Light mode
                           </li>
-                          <li class="footer__release--coming">
-                            Light/Dark mode
-                          </li>
-                          <span class="footer__release--update">Last Web Update: 2022-11-13</span>
                         </ul>
+                        <span class="footer__release--update">Last Web Update: 2022-12-12</span>
                     </div>
                     <div class="footer__qr--code">
-                        <p>
-                          Scan this QR code with your phone for a <a class="first__color--word">better user experience!</a>
-                        </p>
+ 
                         <img class="footer__qr--img" src="/images/qrcode.png" alt="QR Code for scanning with the phone and be redirected to Alexander Tisko mobile webiste." srcset="">
                     </div>
                     <div class="nav__contact--links grid">

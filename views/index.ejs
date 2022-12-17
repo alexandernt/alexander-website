@@ -3,17 +3,10 @@
 <html lang="en">
 
 <head>
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('includes/head') %>
   <meta name="description" content="I'm Alexander Tisko; Senior Data Analyst and Web Developer Based in Argentina and Working for All the World." > 
   <meta name="keywords" content="Alexander Tisko, Tisko, Alex Tisko, Data Analyst, Business Inteligence, Freelancer, Web Design, Data Science, Argentina, Programador Argentina, Data Analyst Argentina"/>
   <meta name="robots" content="index,follow,archive,translate"/>
-  <title>Alexander Tisko</title>
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-  <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-  <link rel="icon" sizes="100x100" href="/images/alexx.svg">
 </head>
 
 <!-- Google tag (gtag.js) -->
@@ -27,145 +20,7 @@
 
 <body class="body">
   <header class="header" id="header">
-    <nav class="nav relative" id="nav">
-
-      <div class="nav__header fixed">
-
-        <div class="nav__header--box grid">
-
-          <div class="nav__header--left flex">
-            <div class="nav__header--logo grid">
-              <img class="nav__header--img" src="
-              /images/alexx.svg" alt="" srcset="">
-            </div>
-            <div class="nav__header--text">
-              <span><a class="crossed__out--word ">Alexander <br> Tisko</a></span>
-            </div>
-          </div>
-
-          <div class="nav__icon relative">
-            <div class="box1"></div>
-            <div class="box2"></div>
-            <div class="box3"></div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="nav__container fixed">
-
-        <div class="nav__container--links grid">
-          <ul class="nav__list grid">
-            <li class="nav__link">
-              <a class="nav__items" href="#header">
-                Home
-              </a>
-            </li>
-            <li class="nav__link">
-              <a class="nav__items" href="#about">
-                About me
-              </a>
-            </li>
-            <li class="nav__link">
-              <a class="nav__items" href="#skills">
-                Skills
-              </a>
-            </li>
-            <li class="nav__link">
-              <a class="nav__items" href="#experience">
-                Experience
-              </a>
-            </li>
-            <li class="nav__link">
-              <a class="nav__items" href="#faqs">
-                FAQs
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="nav__container--right">
-
-          <div class="nav__release">
-            <div class="nav__release--header flex">
-              <h4 class="nav__release--title">
-                Next web releases
-              </h4>
-              <i class="uil uil-angle-down nav__release--arrow"></i>
-            </div>
-
-            <ul class="nav__release--content">
-              <li class="nav__release--coming">
-                A blog page
-              </li>
-              <li class="nav__release--coming">
-                A dynamic CV page
-              </li>
-              <li class="nav__release--coming">
-                A games page (games I've created with differente languages)
-              </li>
-              <li class="nav__release--coming">
-                Websites improvements
-              </li>
-              <li class="nav__release--coming">
-                My website in Spanish
-              </li>
-              <li class="nav__release--coming">
-                Light mode
-              </li>
-            </ul>
-            <span class="nav__release--update">Last Web Update: 2022-11-13</span>
-          </div>
- 
-          <div class="nav__container--cv">
-            <a target="blank" class="btn cv__content--btn"
-              href="https://drive.google.com/file/d/13Yih3HX1ALaaBzih-51LGExRKh_RnI_P/view?usp=sharing"> Download CV </a>
-          </div>
-
-          <div class="nav__qr--code">
-            <h4>
-              Scan this QR code with your phone for a <a class="first__color--word">better user experience!</a>
-            </h4>
-            <img class="nav__qr--img" src="/images/qrcode.png" alt="QR Code for scanning with the phone and be redirected to Alexander Tisko mobile webiste." srcset="">
-          </div>
-
-          <div class="nav__container--contact grid">
-            <div class="nav__contact--links grid">
-              <ul class="nav__contact--social grid flex ">
-                <li class="nav__contact--item">
-                  <a target="_blank" href="https://wa.me/qr/U4H6WUF2HEU4I1" class="nav__contact--link"><i
-                      class="uil uil-whatsapp nav__contact--icon"></i></a>
-                </li>
-                <li class="nav__contact--item">
-                  <a target="_blank" href="https://t.me/Alextisko" class="nav__contact--link"><i
-                      class="uil uil-telegram-alt nav__contact--icon"></i></a>
-                </li>
-                <li class="nav__contact--item">
-                  <a target="_blank" href="https://www.linkedin.com/in/alexandertisko/" class="nav__contact--link"><i
-                      class="uil uil-linkedin-alt nav__contact--icon"></i></a>
-                </li>
-                <li class="nav__contact--item">
-                  <a target="_blank" href="https://twitter.com/AlexanderTisko" class="nav__contact--link"><i
-                      class="uil uil-twitter-alt nav__contact--icon"></i></a>
-                </li>
-                <li class="nav__contact--item">
-                  <a target="_blank" href="https://github.com/alexandernt" class="nav__contact--link"><i
-                      class="uil uil-github-alt nav__contact--icon"></i></a>
-                </li>
-                <li class="nav__contact--item">
-                  <a target="_blank" href="mailto:alexanderntisko@gmail.com" class="nav__contact--link"><i
-                      class="uil uil-envelope-alt nav__contact--icon"></i></a>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-    </nav>
+    <%- include('includes/nav') %>
   </header>
 
   <main class="main" id="main">
@@ -194,7 +49,7 @@
             <div class="about__content--intro grid">
               <h1 class="about__content--title">Data Analyst</h1>
               <p class="about__content--intro-text">
-                I'm working as a Senior Data Analyst for Fluid Truck, but I also help many clients as a freelancer. I help them to understand how powerful is their data so they can make better <a
+                I'm working as a Senior Data Analyst for Fluid Truck, but I also help many clients working as a freelancer. I help them to understand how powerful is their data so they can make better <a
                   class="word__bold first__color--word">data driven decisions</a>.
               </p>
               <img class="about__content--img absolute" src="/images/data.svg" alt="Image representing Alexander Tisko working as a data analyst." srcset="">
@@ -236,7 +91,7 @@
     </section>
 
     <section class="skills section relative" id="skills">
-      <h1 class="section__title skills__section--title"> <a class="crossed__out--word ">Skills</a></h1>
+      <h1 class="section__title skills__section--title"> <a class="crossed__out--word">Skills</a></h1>
       <div class="skills__grid grid">
         <div class="skills__content skills__open">
           <div class="skills__header open">
@@ -345,6 +200,15 @@
             <div class="skills__data">
               <div class="skills__title">
                 <h3 class="skills__name">Tableau</h3>
+                <span class="skills__number">80%</span>
+              </div>
+              <div class="skills__bar">
+                <span class="skills__percentage skills__80"></span>
+              </div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__title">
+                <h3 class="skills__name">Zoho</h3>
                 <span class="skills__number">70%</span>
               </div>
               <div class="skills__bar">
@@ -360,15 +224,7 @@
                 <span class="skills__percentage skills__50"></span>
               </div>
             </div>
-            <div class="skills__data">
-              <div class="skills__title">
-                <h3 class="skills__name">Zoho</h3>
-                <span class="skills__number">50%</span>
-              </div>
-              <div class="skills__bar">
-                <span class="skills__percentage skills__50"></span>
-              </div>
-            </div>
+            
           </div>
         </div>
         <div class="skills__container data-scroll  grid">
@@ -439,6 +295,15 @@
               </div>
               <div class="skills__data">
                 <div class="skills__title">
+                  <h3 class="skills__name">MySQL</h3>
+                  <span class="skills__number">80%</span>
+                </div>
+                <div class="skills__bar">
+                  <span class="skills__percentage skills__80"></span>
+                </div>
+              </div>
+              <div class="skills__data">
+                <div class="skills__title">
                   <h3 class="skills__name">Mongo DB</h3>
                   <span class="skills__number">50%</span>
                 </div>
@@ -489,6 +354,15 @@
             <div class="skills__data">
               <div class="skills__title">
                 <h3 class="skills__name">Confluence</h3>
+                <span class="skills__number">95%</span>
+              </div>
+              <div class="skills__bar">
+                <span class="skills__percentage skills__95"></span>
+              </div>
+            </div>
+            <div class="skills__data">
+              <div class="skills__title">
+                <h3 class="skills__name">GitHub</h3>
                 <span class="skills__number">95%</span>
               </div>
               <div class="skills__bar">
@@ -558,6 +432,8 @@
       </div>
     </section>
 
+<!------------------------ QUALIFICATION EXPERIENCE  ------------------------>
+
     <section class="qualification section" id="experience">
       <h1 class="section__title"> <a class="crossed__out--word ">Experience</a></h1>
       <div class="qualification__containter data-scroll container">
@@ -572,12 +448,12 @@
         <div class="qualification__sections">
           <div class="qualification__content qualification__active" data-content id="education">
             <div class="qualification__data">
-              <div></div>
+              <div class="qualification__box--left"></div>
               <div>
                 <span class="qualification__rounder"></span>
                 <span class="qualification__line"></span>
               </div>
-              <div>
+              <div class="qualification__box--right">
                 <h3 class="qualification__title">
                   React JS
                 </h3>
@@ -595,7 +471,7 @@
               </div>
             </div>
             <div class="qualification__data">
-              <div>
+              <div class="qualification__box--left">
                 <h3 class="qualification__title">Industrial Engineer
                 </h3>
                 <span class="qualification__subtitle">UADE</span>
@@ -610,14 +486,13 @@
             </div>
 
             <div class="qualification__data">
-              <div></div>
+              <div class="qualification__box--left"></div>
               <div>
                 <span class="qualification__rounder"></span>
                 <span class="qualification__line"></span>
               </div>
-              <div>
-                <h3 class="qualification__title">Professional
-                  <br>Data Analyst
+              <div class="qualification__box--right">
+                <h3 class="qualification__title">Data Analyst
                 </h3>
                 <span class="qualification__subtitle">Google
                   Career <br>Coursera</span>
@@ -633,7 +508,7 @@
               </div>
             </div>
             <div class="qualification__data">
-              <div>
+              <div lass="qualification__box--left">
                 <h3 class="qualification__title">JavaScript</h3>
                 <span class="qualification__subtitle">Udemy</span>
                 <div class="qualification__certificate">
@@ -651,7 +526,7 @@
               </div>
             </div>
             <div class="qualification__data">
-              <div></div>
+              <div lass="qualification__box--left"></div>
               <div>
                 <span class="qualification__rounder"></span>
                 <span class="qualification__line"></span>
@@ -670,7 +545,7 @@
               </div>
             </div>
             <div class="qualification__data">
-              <div>
+              <div class="qualification__box--left">
                 <h3 class="qualification__title">Mastering
                   <br>the modern <br>workflow
                 </h3>
@@ -690,7 +565,7 @@
               </div>
             </div>
             <div class="qualification__data">
-              <div></div>
+              <div class="qualification__box--left"></div>
               <div>
                 <span class="qualification__rounder"></span>
               </div>
@@ -709,6 +584,8 @@
                 </div>
               </div>
             </div>
+          
+<!------------------------ QUALIFICATION WORK ------------------------>
 
           </div>
           <div class="qualification__content" data-content id="work">
@@ -811,25 +688,6 @@
             href="https://drive.google.com/file/d/13Yih3HX1ALaaBzih-51LGExRKh_RnI_P/view?usp=sharing"> Download</a>
         </div>
       </div>
-    </section>
-
-    <section class="contact grid" id="contact">
-      <h1 class="section__title">
-        <a class="crossed__out--word ">Let's talk</a>
-      </h1>
-      <div class="contact__content grid">
-        <div class="contact__content--text">
-          <p class="contact__content--p">
-            I'm not a fan of the forms. Therefore you can contact me using your favorites social medias
-          </p>
-        </div>
-        <div class="contact__items-btn">
-          <a class="btn contact__content--btn">
-            Contact
-          </a>
-        </div>
-      </div>
-      <span id="faqs"></span>
     </section>
 
     <section class="faqs relative" id="faqs">
@@ -996,6 +854,30 @@
       </div>
     </section>
 
+    <section class="contact grid relative" id="contact">
+
+      <h1 class="section__title"><a class="crossed__out--word ">Let's talk</a></h1>
+
+      <div class="contact__content grid">
+
+        <div class="contact__img">
+          <img class="contact__img--img" src="/images/contact.svg" alt="" srcset="">
+        </div>
+
+        <div class="contact__text grid">
+
+          <p class="contact__content--p">
+            I will be more than happy to start a conversation with you! Let's talk!
+          </p>
+
+          <a class="btn contact__content--btn" href="/contact">Contact</a>
+
+        </div>
+        
+      </div>
+
+    </section>
+
     <%- include('includes/footer') %>
 
   </main>
@@ -1006,11 +888,14 @@
         <div class="bottom__wpp">
           <a href="https://wa.me/qr/U4H6WUF2HEU4I1"><i class="uil uil-whatsapp bottom__icon"></i></a>
         </div>
-        <div class="bottom__home">
-          <a href="#header"><i class="uil uil-estate bottom__icon"></i></a>
-        </div>
         <div class="bottom__faq">
           <a href="#faqs"><i class="uil uil-question-circle bottom__icon"></i></a>
+        </div>
+        <div class="bottom__faq">
+          <a href="/contact"><i class="uil uil-file-alt bottom__icon"></i></a>
+        </div>
+        <div class="bottom__home">
+          <a href="#header"><i class="uil uil-arrow-circle-up bottom__icon"></i></a>
         </div>
       </div>
     </div>
@@ -1020,7 +905,7 @@
 <script src="/javascripts/index.js"></script>
 <script>
   ScrollOut({
-    targets: '.about__content, .skills__header, .qualification__tabs, .qualification__active, .cv__content--text, .faqs__template--header, .contact__content--p, .contact__content--btn, .cv__content--img, .skills__data',
+    targets: '.about__content, .skills__header, .qualification__tabs, .qualification__active, .cv__content--text, .faqs__template--header, .contact__content--p, .contact__content--btn, .cv__content--img, .skills__data, .footer__user-count, .form__input, .form__btn, .footer__community, .footer__release--title, .footer__release--content, .footer__qr--code, .contact__img--img',
     threshold: 0.06 ,
     once: true,
     cssProps: {

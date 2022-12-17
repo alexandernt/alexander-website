@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <%- include('includes/head') %>
+    </head>
+
+    <body class="body">
+        <header class="header" id="header">
+    
+        </header>
+
+       <main class="contact__form" id="contact__form">
+           <div class="contact__form--content">
+            <div class="cform__header">
+                <a href="/" class="error__ref">
+                    <i class="uil uil-arrow-circle-left error__back"></i>
+                </a>
+            </div>
+            <div class="cform__title">
+                <h1 class="section__title">
+                    <a class="crossed__out--word">Contact me</a>
+                </h1>
+            </div>
+            <div class="cform__considerations">
+        
+                <ul class="cform__considerations--content">
+                    <li class="cform__considerations--points">Sections with <a class="first__color--word word__bold">*</a> are mandatories.</li>
+                    <li class="cform__considerations--points">At least 2 characters long</li>
+                    <li class="cform__considerations--points">Phone number example: country code + area code + phone number = 5491123238352</li>
+                </ul>
+            </div>
+            <div class="cform__container">
+                <form action="/contact-val" class="cform" method="post" autocomplete="on">
+                    <div class="fc__flname grid">
+                        <div class="cform__element">
+                            <!-- <label for="fcname">First name *</label> -->
+                            <input class="fc__input" type="text" id="fcname" name="fcname" placeholder="First name *" required>
+                        </div>
+    
+                        <div class="cform__element">
+                            <!-- <label for="fclastName">Last name *</label> -->
+                            <input class="fc__input" type="text" id="fclastName" name="fclastName" placeholder="Last name *" required>
+                        </div>
+                        
+                    </div>
+
+                    <div class="fccomp__phone grid">
+
+                        <div class="cform__element">
+                            <!-- <label for="fccompanyName">Company name</label> -->
+                            <input class="fc__input" type="text" id="fccompanyName" name="fccompanyName" placeholder="Company name">
+                        </div>
+                        
+                        <div class="cform__element">
+                            <!-- <label for="fcnumber">Phone number</label> -->
+                            <input class="fc__input" type="tel" id="fcnumber" name="fcnumber" placeholder="Phone number">
+                        </div>
+
+                    </div>
+                   
+                    <div class="cform__element">
+                        <input class="fc__input fc__input--email" type="email" id="fcemail" name="fcemail" placeholder="Email address *" required>
+                    </div>
+                        
+                    <div class="fc__lang grid"> 
+
+                        <div class="cform__element">
+                            <%- include('includes/form-countries') %>
+                        </div>
+
+                        <div class="cform__element">
+                        
+                            <select id="fclanguage" name="fclanguage" class="fc__input" required>
+                                <option value="0" disabled selected hidden>Language *</option>
+                                <option value="English">English</option>
+                                <option value="Spanish">Spanish</option>
+                            </select>
+    
+                        </div>
+                    </div>
+                   
+                    
+                   
+                    <div class="cform__element">
+                        <!-- <label for="fcmessage">Message *</label> -->
+                        <textarea class="fc__input fc__input--message" id="fcmessage" name="fcmessage" placeholder="Message *" required></textarea>
+                    </div>
+
+                    <div class="cform__element cform__element--submit">
+                        <button type="submit"  class="btn form__btn">Send</button>
+                    </div>
+                    
+                </form>
+           </div>
+
+       </main>
+
+    </body>
+
+    <script>
+
+    </script>
+
+</html>
