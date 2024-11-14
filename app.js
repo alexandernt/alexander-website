@@ -6,7 +6,6 @@ var logger = require('morgan');
 const allRoutes = require('./routes/index');
 const { connect } = require('http2');
 var bodyParser = require('body-parser');
-var mysql = require('mysql');
 var app = express();
 
 

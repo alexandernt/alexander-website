@@ -3,7 +3,7 @@
 
         <div class="footer__form--left grid">
             <div class="footer__user-count flex">
-                <span class="footer__user--number grid"><%-data%></span>
+                <span class="footer__user--number grid"></span>
                 <p><a class="first__color--word word__bold footer__user--text">datalexperts</a> joined the community!</p>
             </div>
             <div class="form">
@@ -12,11 +12,6 @@
                     <input type="email" class="form__input" name="userSubsEmail" placeholder="Insert your email address" required>
                     <button type="submit" class="btn form__btn">Subscribe</button>
                 </form>
-                <% if(typeof alert != 'undefined') { %>
-                    <% alert.forEach( (error) => { %>
-                        <p class="text__error-msg"> <i class="uil uil-times"></i><%= error.msg %></p>
-                    <% }) %>
-                <% } %>
             </div>
             <div class="footer__community">
                 <p>* The join to the community works as a newsletter to be aware of next releases on the web or about new projects I'll be working on, among other things.</p>
