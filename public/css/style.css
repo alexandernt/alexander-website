@@ -12,15 +12,9 @@
   --fourth-color: #00c3a1;
 
   /* Neutral Shades (for text and background contrast): */
-  --text-color: rgba(255, 255, 255, 0.9);
-  --text-color-lighter: rgb(203, 203, 203);
-  /* 
-  #333333 
-  #444444
-  #212121
-  #4a6f6d
-  */
-  
+  --text-color-titles: #FFF;
+  --text-color: rgb(203, 203, 203);
+
   /* Shadows/Highlights: */
   --shadow-color: rgba(0, 0, 0, 0.4) ;
   --background-color: #1f2023;
@@ -73,7 +67,7 @@
   :root {
     --title-font-size: 70px;
     --big-font-size: 3rem;
-    --h1-font-size: 2.5rem;
+    --h1-font-size: 1.8rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 18px;
     --normal-font-size: 14px;
@@ -90,6 +84,7 @@
   scroll-behavior: smooth;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  
 }
 
 body {
@@ -97,17 +92,35 @@ body {
   font-size: var(--normal-font-size);
   background-color: var(--background-color);
   color: var(--text-color);
-  margin: 0 var(--mb-2);
-  position: relative
+  margin: 0 var(--mb-5);
+  position: relative;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--text-color-titles);
 }
 
 h1 {
   font-size: var(--h1-font-size);
-  color: var(--text-color);
+}
+h2 {
+  font-size: var(--h2-font-size);
+}
+h3 {
+  font-size: var(--h3-font-size);
+}
+h4 {
+  font-size: var(--h4-font-size);
 }
 
 
+
 /*==================== REUSABLE CSS CLASSES ====================*/
+
+
 
 .grid {
   display: -ms-grid;
@@ -148,10 +161,6 @@ p {
   font-size: var(--normal-font-size);
   color: var(--text-color);
   font-weight: 100;
-  line-height: 30px;
-  /* font-weight: var(--font-normal); */
-  /* letter-spacing: .5px;
-  line-height: 1.7rem; */
 }
 
 /* SCROLLL */
@@ -180,65 +189,18 @@ p {
   display: none;
 }
 
-/* MAIN CONTAINER */
+/* ---------------------  LEFT ---------------------*/
+
+
 
 .left-block {
   height: 100vh;
   position: fixed;
   overflow-y: auto; /* Prevent column overflow */
-  box-sizing: border-box; /* Include padding/border in size calculation */
-  word-wrap: break-word; /* Ensure long words break to the next line */
-  overflow-wrap: break-word; /* Support for older browsers */
   width: 200px;
-  left: 5rem;
-  top: 5rem;
+  left: var(--mb-10);
+  top: var(--mb-5);
 }
-
-
-.container {
-  padding: var(--mb-5) var(--mb-2);
-  box-sizing: border-box;
-  position: absolute;
-  display: grid;
-  grid-template-columns: .65fr .35fr;
-  left: 300px;
-  gap: var(--mb-5);
-  max-width: 100%;
-}
-
-.center-block {
-  border-radius: var(--container-border);
-  background-color: var(--background-color-lighter);
-  max-width: 100%;
-}
-
-.center-container {
-  margin: var(--mb-2) var(--mb-2);
-}
-
-.center-welcome-pic{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.center-description {
-  margin: var(--mb-2) 0;
-}
-
-/* LEFT SIDE */
-
-.site-name {
-  padding: var(--mb-2) 0 var(--mb-0-5) 0;
-}
-
-.site-description {
-  font-size: var(--small-font-size);
-  font-weight: var(--font-weight-normal);
-  color: var(--text-color-lighter);
-}
-
-/* SOCUIALS */
 
 .social {
   display: flex;
@@ -259,16 +221,33 @@ p {
 }
 .nav-item {
   display: flex;
-  gap: var(--mb-1);
+  gap: var(--mb-5);
 }
 
 .nav-ref {
-  color: var(--text-color-lighter);
+  color: var(--text-color);
 }
 
 
+
+/* ---------------------  RIGHT ---------------------*/
+.righ-center-container {
+  margin: var(--mb-5) var(--mb-5) var(--mb-5) var(--mb-2);
+  box-sizing: border-box;
+  position: absolute;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  left: 300px;
+  gap: var(--mb-5);
+}
+
 .right-container-titles {
   margin: var(--mb-0-5) 0;
+}
+
+.right-block {
+  max-width: 100%;
+  padding-right: var(--mb-5);
 }
 
 .interests {
@@ -278,7 +257,6 @@ p {
   gap: var(--mb-0-5);
   margin-bottom: var(--mb-2);
 }
-
 
 .interest-items {
   background-color: var(--background-color-lighter);
@@ -292,15 +270,240 @@ p {
 }
 
 
-.experience-title {
-  display: flex;
-  align-items: center;
-  gap: var(--mb-1);
-}
-.experience-tasks {
-margin-left: var(--mb-2);
+/* ---------------------  CENTER ---------------------*/
+.center-block {
+  border-radius: var(--container-border);
+  background-color: var(--background-color-lighter);
 }
 
-.experience-tasks ul {
+.center-container {
+  margin: var(--mb-2) var(--mb-2);
+}
+
+.center-title {
+  margin: var(--mb-2) 0;
+}
+
+.site-name {
+  padding: var(--mb-2) 0 var(--mb-0-5) 0;
+}
+
+.site-description {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-weight-normal);
+}
+
+.center-description {
+  margin-top: var(--mb-1-5);
+  line-height: 25px;
+
+}
+
+.center-welcome-container ul {
   list-style: circle;
+  margin-top: var(--mb-1-5);
+  margin-left: var(--mb-2-5);
+}
+
+.recommendations-container {
+  margin: var(--mb-3) 0;
+  display: flex; /* Use flexbox to lay out the blocks horizontally */
+  gap: 20px; /* Space between blocks */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Optional: Smooth snapping */
+  padding: 10px;
+  scroll-behavior: smooth; /* Adds smooth scrolling on wheel events */
+}
+
+
+.recomendations-blocks {
+  flex: 0 0 270px; /* Fixed width for each block */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional for better aesthetics */
+  scroll-snap-align: start; /* Align block smoothly on scroll */
+  min-height: 150px; /* Ensure a consistent height */
+  background-color: var(--background-color);
+  margin-bottom: var(--mb-1);
+}
+
+.recommendations-container::-webkit-scrollbar {
+  height: 10px; /* Horizontal scrollbar height */
+  display: initial;
+}
+
+.recommendations-container::-webkit-scrollbar-thumb {
+  background-color: var(--first-color);
+  border-radius: 10px;
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+
+.recommendations-container::-webkit-scrollbar-track {
+  background-color: var(--background-color);
+  border-radius: 10px;
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+
+.recommendation-title h4 {
+  margin-bottom: var(--mb-0-5);
+}
+
+.recommendation-title p {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-titles);
+}
+
+.recommendation-stars {
+  margin-top: var(--mb-0-5);
+  display: flex;
+  gap: var(--mb-0-25);
+}
+
+.recommendation-description {
+  margin-top: var(--mb-1);
+}
+
+
+.faqs__container {
+  margin: 0 var(--mb-2);
+}
+
+.faqs__template--header {
+  margin-top: var(--mb-1);
+  background-color: var(--background-color);
+  padding: var(--mb-0-5) var(--mb-1);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.faqs__template--question {
+  margin: auto 0;
+  color: var(--text-color-light);
+  font-size: var(--normal-font-size);
+}
+
+.faqs__template--arrow {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  transition: 1s ease-out;
+  -webkit-transition: 1s ease-out;
+  -moz-transition: 1s ease-out;
+  -ms-transition: 1s ease-out;
+  -o-transition: 1s ease-out;
+  font-size: 30px;
+}
+
+.faqs__template--answer {
+  margin-top: var(--mb-1);
+  color: var(--text-color-light);
+  background-color: var(--background-color-lighter);
+  padding: var(--mb-0-5) var(--mb-1);
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  padding: var(--mb-1-5);
+  line-height: 1.7rem;
+}
+
+.faqs__template--answer p {
+  margin-bottom: var(--mb-1);
+}
+
+.faqs__template--closed .faqs__template--answer {
+  height: 0;
+  display: none;
+  opacity: 0;
+  transition: 10s ease-in;
+  -webkit-transition: 10s ease-in;
+  -moz-transition: 10s ease-in;
+  -ms-transition: 10s ease-in;
+  -o-transition: 10s ease-in;
+}
+
+.faqs__template--open .faqs__template--answer {
+  height: 100%;
+  display: inline-block;
+  opacity: 1;
+  transition: 10s ease-out;
+  -webkit-transition: 10s ease-out;
+  -moz-transition: 10s ease-out;
+  -ms-transition: 10s ease-out;
+  -o-transition: 10s ease-out;
+}
+
+.faqs__template--open .faqs__template--arrow {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  transition: .5s ease-in;
+  -webkit-transition: .5s ease-in;
+  -moz-transition: .5s ease-in;
+  -ms-transition: .5s ease-in;
+  -o-transition: .5s ease-in;
+  color: var(--first-color);
+}
+
+
+
+/* --------------------- DATAFLOW --------------------- */
+/* .center-data h4 {
+  margin: var(--mb-2) 0;
+}
+.center-data-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+} */
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  /* html {
+    position: relative;
+  }*/
+  .left-block {
+   display: flex;
+   overflow-y: hidden;
+   width: 100%;
+   left: 0;
+   top: 0;
+   height: 250px;
+  } 
+
+  .social {
+    align-items: none;
+  }
+  /* .righ-center-container {
+    left: 0;
+   
+    position: absolute;
+    display: none;
+  } */
 }

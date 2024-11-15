@@ -1,3 +1,29 @@
+
+// Variables
+const faqsTemplate = document.querySelectorAll('.faqs__template')
+const faqsHeader = document.querySelectorAll('.faqs__template--header')
+
+// Main Function
+function toggleFaqs() {
+    let itemClass = this.parentNode.className
+    for (i = 0; i < faqsTemplate.length; i++) {
+        if (itemClass === 'faqs__template faqs__template--closed') {
+            this.parentNode.className = 'faqs__template faqs__template--open'
+        }
+        if (itemClass === 'faqs__template faqs__template--open') {
+            this.parentNode.className = 'faqs__template faqs__template--closed'
+        }
+    }
+};
+
+// For each header called the toggleFaqs fucntion
+faqsHeader.forEach((el) => {
+    el.addEventListener('click', toggleFaqs)
+});
+
+
+
+
 // const html = document.documentElement
 // const main = document.getElementById("main")
 // const body = document.getElementsByClassName('.body')
