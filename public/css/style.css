@@ -1,0 +1,303 @@
+/*==================== GOOGLE FONTS ====================*/
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Montserrat&display=swap');
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+  /*========== Colors ==========*/
+  /* Accent Color Options (for highlights and call-to-action buttons): */
+  --first-color: #ee1d52;
+  --second-color: #ddf247;
+  --third-color: #0083c7;
+  --fourth-color: #00c3a1;
+
+  /* Neutral Shades (for text and background contrast): */
+  --text-color: rgba(255, 255, 255, 0.9);
+  --text-color-lighter: rgb(203, 203, 203);
+  /* 
+  #333333 
+  #444444
+  #212121
+  #4a6f6d
+  */
+  
+  /* Shadows/Highlights: */
+  --shadow-color: rgba(0, 0, 0, 0.4) ;
+  --background-color: #1f2023;
+  --background-color-lighter: #27292c;
+
+  /*========== Font and typography ==========*/
+  --title-font: 'Lato', sans-serif;
+  --body-font: 'Montserrat', sans-serif;
+
+  /* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --title-font-size: 50px;
+  --big-font-size: 2rem;
+  --h1-font-size: 2.2rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: 1.05rem;
+  --small-font-size: 1rem;
+  --smaller-font-size: 0.85rem;
+
+
+  /*========== Font weight ==========*/
+  --font-weight-normal: 450;
+  --font-weight-medium: 550;
+  --font-weight-semi-bold: 600;
+  --font-weight-bold: 700;
+
+  /*========== Margenes Bottom ==========*/
+  /* .25rem = 4px, .5rem = 8px, .75rem = 12px ... */
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+  --mb-4: 4rem;
+  --mb-5: 5rem;
+  --mb-7: 7rem;
+  --mb-10: 10rem;
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+  --container-border: 1rem;
+}
+
+/* Font size for large devices */
+@media screen and (min-width: 968px) {
+  :root {
+    --title-font-size: 70px;
+    --big-font-size: 3rem;
+    --h1-font-size: 2.5rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 18px;
+    --normal-font-size: 16px;
+    --small-font-size: 14px;
+    --smaller-font-size: 12px
+  }
+}
+
+/*==================== BASE ====================*/
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0 var(--mb-2);
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  color: var(--text-color);
+}
+
+
+/*==================== REUSABLE CSS CLASSES ====================*/
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.sticky {
+  position: sticky;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  font-weight: 100;
+  line-height: 30px;
+  /* font-weight: var(--font-normal); */
+  /* letter-spacing: .5px;
+  line-height: 1.7rem; */
+}
+
+/* SCROLLL */
+
+[data-scroll] {
+  opacity: 0;
+  -webkit-transform: translateX(-6rem) scale(0.93);
+      -ms-transform: translateX(-6rem) scale(0.93);
+          transform: translateX(-6rem) scale(0.93);
+  -webkit-transition: all 1.5s;
+  -o-transition: all 1.5s;
+  transition: all 1.5s
+}
+
+[data-scroll="in"] {
+  opacity: 1;
+  -webkit-transform: translateX(0) scale(1);
+      -ms-transform: translateX(0) scale(1);
+          transform: translateX(0) scale(1)
+}
+
+
+/*==================== LAYOUT ====================*/
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* MAIN CONTAINER */
+
+.container {
+  height: 100vh;
+  padding: var(--mb-5) var(--mb-2);
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.left-block,
+.right-block {
+  height: 100vh;
+  position: fixed;
+  overflow-y: auto; /* Prevent column overflow */
+  box-sizing: border-box; /* Include padding/border in size calculation */
+  word-wrap: break-word; /* Ensure long words break to the next line */
+  overflow-wrap: break-word; /* Support for older browsers */
+
+}
+
+.left-block {
+  width: 200px;
+  left: 5rem;
+  top: 5rem;
+}
+
+.right-block  {
+  width: 300px;
+  top: 5rem;
+  right: var(--mb-5);
+}
+
+.center-block {
+  position: fixed;
+  border-radius: var(--container-border);
+  background-color: var(--background-color-lighter);
+  overflow-y: auto;
+  height: 100vh;
+  left: calc(250px + 5rem); /* Left column width + padding */
+  right: calc(350px + 5rem); /* Right column width + padding */
+}
+
+.center-container {
+  margin: var(--mb-2) var(--mb-2);
+}
+
+.center-description {
+  margin: var(--mb-2) 0;
+}
+
+/* LEFT SIDE */
+
+.site-name {
+  font-size: var(--normal-font-size);
+  padding: var(--mb-2) 0 var(--mb-1) 0;
+}
+
+.site-description {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-weight-normal);
+  color: var(--text-color-lighter);
+}
+
+/* SOCUIALS */
+
+.social {
+  display: flex;
+  align-items: center;
+  padding: var(--mb-3) 0 var(--mb-2) 0;
+  gap: 1rem;
+}
+
+.social-icon {
+  font-size: var(--h3-font-size);
+  color: var(--first-color);
+}
+
+.nav {
+  margin-top: var(--mb-1);
+  display: grid;
+  gap: var(--mb-2);
+}
+.nav-item {
+  display: flex;
+  gap: 50px;
+}
+
+.nav-ref {
+  color: var(--text-color-lighter);
+}
+
+
+.right-container {
+  max-width: 100%;
+
+}
+
+.interests {
+  margin: var(--mb-1) 0;
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--mb-1);
+}
+
+.interes-left-block,
+.interes-right-block {
+  display: grid;
+  flex-direction: row ;
+  gap: var(--mb-1);
+
+}
+.interest-items {
+  background-color: var(--background-color-lighter);
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: var(--mb-3);
+  border-radius: 20px;
+  font-size: var(--small-font-size);
+}
