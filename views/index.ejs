@@ -20,16 +20,13 @@
 
 <!---------------- MAIN ---------------->
 <body class="body" id="body">
-
+  <!-- Left Sidebar -->
+  <aside class="left-block">
+    <%- include('includes/left-block') %>
+    <%- include('includes/nav') %>
+  </aside>
   <!-- Main Container -->
   <div class="container">
-
-    <!-- Left Sidebar -->
-    <aside class="left-block">
-      <%- include('includes/left-block') %>
-      <%- include('includes/nav') %>
-    </aside>
-
     <!-- Main Content -->
     <main class="center-block">  <%- include('includes/center-block') %> </main>
 
