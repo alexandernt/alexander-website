@@ -1,11 +1,8 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
   <%- include('includes/head') %>
 </head>
-
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H29938YQNG"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -13,28 +10,17 @@
   gtag('js', new Date());
   gtag('config', 'G-H29938YQNG');
 </script>
-
 <body class="body" id="body">
-  <aside class="left-block">
+  <section class="left-block">
     <%- include('includes/left-block') %>
-    <%- include('includes/nav') %>
-  </aside>
-
-  <div class="righ-center-container">
-    <main class="center-block">  
-      <%- include('includes/center-block') %> 
-      <!-- <%- include('includes/faqs') %>   -->
-    </main>
-    <aside class="right-block"> 
-      <%- include('includes/right-block') %>  
-    </aside>
-    
-  </div>
-
+  </section>
+  <main class="center-right-block">
+    <%- include('includes/center-block') %> 
+    <%- include('includes/right-block') %>  
+  </main>
+  <%- include('includes/footer') %>  
 </body>
-
 <script src="/javascripts/index.js"></script>
-
 <script>
   ScrollOut({
     targets: '',
@@ -46,5 +32,4 @@
     },
   });
 </script>
-
 </html>
