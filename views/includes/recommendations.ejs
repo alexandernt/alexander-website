@@ -1,110 +1,69 @@
 <div class="center-recommendations">
+
     <h1 class="center-title">Recommendations</h1> 
+
     <div class="recommendations-container">
+
         <div class="recomendations-blocks">
-            <div class="recommendation-title">
-                <h4>Connor S</h4>
-                <p>Head of Business Inteligence</p>
-                <p>(Denver, CO)</p>
-                <div class="recommendation-stars">
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                </div>
-            </div>
-            <div class="recommendation-description">
-                <p>Alex demonstrated a pattern for delivering on the immediate need
-                 quickly while highlighting the steps to build better systems.</p>
-                <p>His thoughtful contributions to the team, set the standard for many of our deliverables.</p>               
-            </div>
-            <div class="recommendation-btn">
-                <a target="blank" class="" href="https://drive.google.com/file/d/119OLJTUMQ_1HRLYOQzJznaRd-JQatIe0/view?usp=sharing"> 
-                   Read more... 
-                </a>
-            </div>
-        </div>
+            <%- include('content/carousel_reference', { 
+                persona: 'Connor S.',
+                title: 'Head of BI', 
+                location: '(United States)', 
+                description: [
+                    'Alex demonstrated a pattern for delivering on the immediate need quickly while highlighting the steps to build better systems.',
+                    'His thoughtful contributions to the team, set the standard for many of our deliverables.'
+                ]
+            }) %>
+            <%- include('content/button', { text: 'Read more', link: 'https://drive.google.com/file/d/119OLJTUMQ_1HRLYOQzJznaRd-JQatIe0/view?usp=sharing' }) %>
+        </div> 
+
         <div class="recomendations-blocks">
-            <div class="recommendation-title">
-                <h4>Siobhan S</h4>
-                <p>Human Resources Manager</p>
-                <p>(United Kingdom)</p>
-                <div class="recommendation-stars">
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                </div>
-            </div>
-            <div class="recommendation-description">
-                <p>Alex consistently proved to be a loyal, hard working and dedicated
-                    individual.</p>
-                    <p>He's able to adapt his communication to
-                    suit his audience and always demonstrates a positive, friendly and professional attitude to others. </p>
-                    <p>
-                    <p>I strongly recommend him.</p>     
-                </p>
-            </div>
-            <div class="recommendation-btn">
-                <a target="blank" class="" href="https://drive.google.com/file/d/12QPOuXmpk9t72fviLCYOVo90DU-MHnXU/view?usp=sharing"> 
-                   Read more... 
-                </a>
-            </div>
-            
+            <%- include('content/carousel_reference', { 
+                persona: 'Siobhan S.',
+                title: 'Head of HR', 
+                location: '(United Kingdom)', 
+                description: [
+                    'Alex consistently proved to be a loyal, hard-working, and dedicated individual.',
+                    'He\'s able to adapt his communication to suit his audience and always demonstrates a positive, friendly, and professional attitude to others.',
+                    'I strongly recommend him.'
+                ]
+            }) %>
+            <%- include('content/button', { 
+                text: 'Read more', link: 'https://drive.google.com/file/d/12QPOuXmpk9t72fviLCYOVo90DU-MHnXU/view?usp=sharing' }) %>      
         </div>
+
         <div class="recomendations-blocks">
-            <div class="recommendation-title">
-                <h4>Luis G</h4>
-                <p>Head of Quality Assurance</p>
-                <p>(Buenos Aires)</p>
-                <div class="recommendation-stars">
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                </div>
-            </div>
-            <div class="recommendation-description">
-                <p> Clear vision and understanding of processes, 
-                    easy manner to perform solid results sharing knowledge with colleagues,
-                    great attitude and initiatives to create and inspire others. 
-                    <br>
-                    So glad to know that we were able to work together. 🖤</p>
-            </div>  
-            <div class="recommendation-btn">
-                <a target="blank" class="" href="https://www.linkedin.com/in/alexandertisko/details/recommendations/?detailScreenTabIndex=0"> 
-                   Read more... 
-                </a>
-            </div>
-            
+            <%- include('content/carousel_reference', { 
+                persona: 'Luis G.',
+                title: 'Head of QA', 
+                location: '(Buenos Aires)', 
+                description: [
+                    'Alex has a clear vision and understanding of processes, easy manner to perform solid results sharing knowledge with colleagues, great attitude and initiatives to create and inspire others.',
+                    'So glad to know that we were able to work together.'
+                ]
+            }) %>
+            <%- include('content/button', { 
+                text: 'Read more', 
+                link: 'https://drive.google.com/file/d/12QPOuXmpk9t72fviLCYOVo90DU-MHnXU/view?usp=sharing' 
+            }) %>      
         </div>
+
         <div class="recomendations-blocks">
-            <div class="recommendation-title">
-                <h4>Alejandro R</h4>
-                <p>Head of Operations Team</p>
-                <p>(Buenos Aires)</p>
-                <div class="recommendation-stars">
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                    <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
-                </div>
-            </div>
-            <div class="recommendation-description">
-                <p>Alex always looks ahead to find the areas of improvement. 
-                    <br>Working with him was really a rich experience as he was always sharing ideas and proactively helping the team.
-                </p>
-            </div>
-            <div class="recommendation-btn">
-                <a target="blank" class="" href="https://www.linkedin.com/in/alexandertisko/details/recommendations/?detailScreenTabIndex=0"> 
-                   Read more... 
-                </a>
-            </div>
-            
+            <%- include('content/carousel_reference', { 
+                persona: 'Alejandro R.',
+                title: 'Head of OPS', 
+                location: '(Buenos Aires)', 
+                description: [
+                    'Alex always looks ahead to find the areas of improvement.',
+                    'Working with him was really a rich experience as he was always sharing ideas and proactively helping the team.'
+                ]
+            }) %>
+            <%- include('content/button', { 
+                text: 'Read more', 
+                link: 'https://drive.google.com/file/d/12QPOuXmpk9t72fviLCYOVo90DU-MHnXU/view?usp=sharing' 
+            }) %>      
         </div>
+        
     </div>
+    
 </div>

@@ -1,0 +1,31 @@
+
+    <div class="recommendation-title">
+        
+        <h4><%= persona %></h4>
+        <p><%= title %></p>
+        <p><%= location %></p>
+
+        <div class="recommendation-stars">
+
+            <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
+            <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
+            <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
+            <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
+            <img height="16" width="16" class="recommendation-star-svg" src="/images/star.svg" alt=""> 
+
+        </div>
+
+    </div>
+
+    <div class="recommendation-description">
+
+        <% if (typeof description !== 'undefined' && description.length > 0) { %>
+            <% description.forEach(function(paragraph) { %>
+                <p><%= paragraph %></p>
+            <% }) %>
+        <% } else { %>
+            <p>This is a default description. Add your content here.</p>
+        <% } %>
+
+    </div>
+

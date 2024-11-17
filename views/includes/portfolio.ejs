@@ -1,46 +1,36 @@
 
 <section class="portfolio" id="portfolio">
-    <div class="portfolio_meta">
-        <h1 class="center-title">Projects</h1> 
-        <p>
-            While much of my work is subject to client confidentiality, I’m excited to share some highlights from my personal projects and contributions.  <br> 
-        </p>
-        <p>
-            I’m also eager to collaborate on open-source initiatives and create publicly available content, allowing me to share insights and solutions with a wider audience.
-        </p>
-        
-    </div>
-    
-    <div class="portfolio-container">
-        <div class="portfolio-element">
 
-            <h2>LookML Content Validator Script</h2>
-            <div class="portfolio-description">
-                <p>
-                    This GitHub Action runs Looker's content validator on new pull requests. It checks if the changes break production content:
-                </p>
-                <ul class="center-description-list portfolio-description-list ">
-                    <li class="portfolio-description-items">
-                        If content breaks, the action fails, requiring a bypass label to merge.
-                    </li>
-                    <li class="portfolio-description-items">
-                        If no issues are found, the merge proceeds seamlessly.
-                    </li>
-                </ul>
-            </div>
-            <div class="portfolio-repo">
-                <a target="_blank" href="https://github.com/alexandernt/lookml-content-validator" class="">
-                    <i class="uil uil-github-alt repo-github-logo"></i>
-                </a>
-                <a target="_blank" href="https://github.com/alexandernt/lookml-content-validator" class="repo-github-text">
-                    <p>Repository</p>
-                </a>
-                <a target="_blank" href="https://github.com/alexandernt/lookml-content-validator" class="">
-                    <i class="uil uil-github-alt repo-github-logo"></i>
-                </a>
-            </div>
-            
-        </div>
+    <div class="portfolio_meta">
+
+        <h1 class="center-title">Projects</h1> 
+        <p>While much of my work is subject to client confidentiality, I’m excited to share some highlights from my personal projects and contributions.  <br> </p>
+        <p>I’m also eager to collaborate on open-source initiatives and create publicly available content.</p>
         
     </div>
+
+    <%- include('content/carousel_portfolio', { 
+
+        title: 'My Website',
+        images: ['ejs', 'nodejs', 'js', 'html', 'css'], 
+        languages: ['#ejs', '#nodejs', '#javascript', '#html', '#css'],
+        description: [
+            'I’m excited to share the open-source repository for my personal website.',
+            'This portfolio represents my skills and dedication to data analytics, engineering, and web development. Feel free to explore, and don’t hesitate to reach out if you have any questions or would like to collaborate.'
+        
+        ]
+    }) %>
+    
+    <%- include('content/carousel_portfolio', { 
+
+        title: 'LookML Content Validator',
+        images: ['python'], 
+        languages: ['#python'], 
+        description: [
+            'This GitHub Action runs Looker’s content validator on new pull requests. It checks if changes break production frontend content.',
+            'If content breaks, the action fails, requiring a bypass label to merge. If no issues are found, the merge proceeds seamlessly.'
+        ]
+    
+    }) %>
+
 </section>

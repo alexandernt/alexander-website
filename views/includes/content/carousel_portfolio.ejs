@@ -1,0 +1,33 @@
+<div class="portfolio-container">
+    <div class="portfolio-element">
+        <h2><%= title %></h2>
+        
+        <div class="portfolio-language">
+            <% if (typeof languages !== 'undefined' && languages.length > 0 && typeof images !== 'undefined' && images.length > 0) { %>
+                <% languages.forEach(function(language, index) { %>
+                    <div class="language-item">
+                        <img class="language-img" src="/images/<%= images[index] %>.svg" alt="<%= language %> Icon" loading="lazy">
+                        <p><%= language %></p>
+                    </div>
+                <% }) %>
+            <% } else { %>
+                <div class="language-item">
+                    <img class="" src="/images/default.svg" alt="Default Icon" loading="lazy">
+                    <p>#defaultLanguage</p>
+                </div>
+            <% } %>
+        </div>
+        
+        <div class="portfolio-description">
+            <% if (typeof description !== 'undefined' && description.length > 0) { %>
+                <% description.forEach(function(paragraph) { %>
+                    <p><%= paragraph %></p>
+                <% }) %>
+            <% } else { %>
+                <p>This is a default description. Add your content here.</p> <!-- Fallback -->
+            <% } %>
+        </div>
+        
+        <%- include('button', { text: 'See repository', link: 'https://github.com/alexandernt/lookml-content-validator' }) %>
+    </div>
+</div>
