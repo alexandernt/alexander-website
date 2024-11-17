@@ -16,12 +16,21 @@ function toggleFaqs() {
     }
 };
 
-// For each header called the toggleFaqs fucntion
-faqsHeader.forEach((el) => {
-    el.addEventListener('click', toggleFaqs)
-});
+// // For each header called the toggleFaqs fucntion
+// faqsHeader.forEach((el) => {
+//     el.addEventListener('click', toggleFaqs)
+// });
 
+// document.addEventListener('scroll', function () {
+//     const image = document.getElementById('svgImage');
+//     const bounding = image.getBoundingClientRect();
 
+//     if (bounding.top < 0 || bounding.bottom < window.innerHeight / 2) {
+//         image.classList.add('hidden'); // Oculta la imagen
+//     } else {
+//         image.classList.remove('hidden'); // Muestra la imagen
+//     }
+// });
 
 
 // const html = document.documentElement

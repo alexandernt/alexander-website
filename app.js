@@ -8,7 +8,6 @@ const { connect } = require('http2');
 var bodyParser = require('body-parser');
 var app = express();
 
-
 // ---------------------------- VIEW ENGINE SETUP ---------------------------- \\
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

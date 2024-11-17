@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <%- include('includes/head') %>
+  <%- include('includes/sections/head') %>
 </head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-H29938YQNG"></script>
 <script>
@@ -11,13 +11,14 @@
   gtag('config', 'G-H29938YQNG');
 </script>
 <body class="body" id="body">
-  <%- include('includes/nav-menu') %>
-  
+  <%- include('includes/sections/nav-menu') %>  <!-- left block (mobile at  the top) --> 
   <main class="center-right-block">
-    <%- include('includes/center-block') %> 
-    <%- include('includes/right-block') %>  
+    <div class="center-right-container">
+      <%- include('includes/sections/center-block') %> <!-- center block --> 
+      <%- include('includes/sections/right-block') %>  <!-- right block --> 
+    </div>
   </main>
-  <%- include('includes/footer') %>  
+  <%- include('includes/sections/footer') %>  
 </body>
 <script src="/javascripts/index.js"></script>
 <script>

@@ -4,8 +4,9 @@
 	 viewBox="0 0 256.29 279.18" style="enable-background:new 0 0 256.29 279.18;" xml:space="preserve">
 <style type="text/css">
 	.st0{display: #ddf247;}
-	.st1{display:inline;fill:#EBEBEB;}
+	.st1{display:inline;fill:none;}
 	.st2{fill:#FFFFFF;}
+	.st3{fill:#1f2023;}
 </style>
 <g id="Background_Complete">
 </g>
@@ -17,11 +18,11 @@
 	<path class="st1" d="M-104.98,62.79c-10.49-14.6-31.19-22.13-47.94-15.85l0.02,0c-13.25,3.2-24.18,14.71-27.68,28.06
 		c-4.79,18.29,4.07,39.31,20.58,48.51s39.16,5.6,51.89-8.38C-95.37,101.15-93.94,78.14-104.98,62.79z"/>
 </g>
-<g id="Character_2">
+<g id="Character_2" class="st2">
 </g>
 <g id="Plant">
 </g>
-<g id="Character_1">
+<g id="Character_1" class="st3">
 	
 		<image style="display:none;overflow:visible;" width="640" height="640" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gIoSUNDX1BST0ZJTEUAAQEAAAIYAAAAAAIQAABtbnRyUkdC
 IFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAA

@@ -4,12 +4,11 @@
     <div class="portfolio_meta">
 
         <h1 class="center-title">Projects</h1> 
-        <p>While much of my work is subject to client confidentiality, I’m excited to share some highlights from my personal projects and contributions.  <br> </p>
-        <p>I’m also eager to collaborate on open-source initiatives and create publicly available content.</p>
+        <p>While much of my work is subject to client confidentiality, I’m excited to share some highlights from my personal projects and contributions.</p>
         
     </div>
 
-    <%- include('content/carousel_portfolio', { 
+    <%- include('../content/carousel_portfolio', { 
 
         title: 'My Website',
         images: ['ejs', 'nodejs', 'js', 'html', 'css'], 
@@ -17,11 +16,10 @@
         description: [
             'I’m excited to share the open-source repository for my personal website.',
             'This portfolio represents my skills and dedication to data analytics, engineering, and web development. Feel free to explore, and don’t hesitate to reach out if you have any questions or would like to collaborate.'
-        
         ]
     }) %>
     
-    <%- include('content/carousel_portfolio', { 
+    <%- include('../content/carousel_portfolio', { 
 
         title: 'LookML Content Validator',
         images: ['python'], 

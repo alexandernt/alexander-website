@@ -1,0 +1,11 @@
+<div class="interests">
+    
+    <% if (typeof interests !== 'undefined' && interests.length > 0) { %>
+        <% interests.forEach(function(interest) { %>
+            <span class="interest-items"><%= interest %></span>
+        <% }) %>
+    <% } else { %>
+        <span class="interest-items">#default-interest</span>
+    <% } %>
+    
+</div>
