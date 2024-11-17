@@ -11,12 +11,13 @@
     <%- include('../content/carousel_portfolio', { 
 
         title: 'My Website',
-        images: ['ejs', 'nodejs', 'js', 'html', 'css'], 
-        languages: ['#ejs', '#nodejs', '#javascript', '#html', '#css'],
+        images: ['ejs', 'js', 'html', 'css'], 
+        languages: ['#ejs','#javascript', '#html', '#css'],
         description: [
             'I’m excited to share the open-source repository for my personal website.',
             'This portfolio represents my skills and dedication to data analytics, engineering, and web development. Feel free to explore, and don’t hesitate to reach out if you have any questions or would like to collaborate.'
-        ]
+        ],
+        link: 'https://github.com/alexandernt/alexander-website.git'
     }) %>
     
     <%- include('../content/carousel_portfolio', { 
@@ -27,7 +28,8 @@
         description: [
             'This GitHub Action runs Looker’s content validator on new pull requests. It checks if changes break production frontend content.',
             'If content breaks, the action fails, requiring a bypass label to merge. If no issues are found, the merge proceeds seamlessly.'
-        ]
+        ],
+        link: 'https://github.com/alexandernt/lookml-content-validator'
     
     }) %>
 

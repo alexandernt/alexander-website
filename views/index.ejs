@@ -1,35 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <%- include('includes/sections/head') %>
-</head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-H29938YQNG"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-H29938YQNG');
-</script>
-<body class="body" id="body">
-  <%- include('includes/sections/nav-menu') %>  <!-- left block (mobile at  the top) --> 
-  <main class="center-right-block">
-    <div class="center-right-container">
-      <%- include('includes/sections/center-block') %> <!-- center block --> 
-      <%- include('includes/sections/right-block') %>  <!-- right block --> 
-    </div>
-  </main>
-  <%- include('includes/sections/footer') %>  
-</body>
-<script src="/javascripts/index.js"></script>
-<script>
-  ScrollOut({
-    targets: '',
-    threshold: 0.06 ,
-    once: true,
-    cssProps: {
-      viewportY: true,
-      visibleY: true
-    },
-  });
-</script>
+
+  <head>
+    <%- include('includes/sections/head') %>
+  </head>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H29938YQNG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H29938YQNG');
+  </script>
+
+  <body class="body" id="body">
+
+    <%- include('includes/sections/nav-menu') %>  
+    
+    <main class="center-right-block">
+
+      <div class="center-right-container">
+
+        <%- include('includes/sections/center-block') %> 
+
+        <%- include('includes/sections/right-block') %>  
+
+      </div>
+
+    </main>
+
+  </body>
+
+  <script src="/javascripts/index.js"></script>
+
+  <script>
+    ScrollOut({
+      targets: '',
+      threshold: 0.06 ,
+      once: true,
+      cssProps: {
+        viewportY: true,
+        visibleY: true
+      },
+    });
+
+  </script>
+
 </html>
