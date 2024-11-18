@@ -1,7 +1,6 @@
 # Oveview App - How to Run App
 Clone repo --> npm installation --> set up app dev (nodemon) --> start app.
 
-`git init`
 # Run Website Using -npm start-
 1) You need to have installed `NodeJS` and `NPM`. Run the following code to check if you have installed. 
 ```
